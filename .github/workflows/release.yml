@@ -11,7 +11,7 @@ on:
 name: Create release
 jobs:
   build_windows:
-    name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'link runtime' || ''}}
+    name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
 
     strategy:
@@ -128,7 +128,7 @@ jobs:
           ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP-v.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-x86-dynamic-openMP.zip
           ${{ github.workspace }}/Artifacts/windows-x86-dynamic-openMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-x86-static-noOpenMP.zip
