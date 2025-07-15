@@ -39,6 +39,10 @@ jobs:
       shell: cmd
       run: clone-dependencies.cmd
 
+    - name: Download Configure
+      shell: cmd
+      run: download-configure.cmd
+
     - name: Run configure
       shell: cmd
       working-directory: Configure
