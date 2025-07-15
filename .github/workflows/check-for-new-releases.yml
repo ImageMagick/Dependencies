@@ -18,8 +18,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Clone dependencies
+      shell: cmd
+      run: clone-dependencies.cmd
+
     - name: Check releases
       shell: cmd
-      run: |
-        clone-dependencies.cmd
-        check-releases.cmd
+      run: check-releases.cmd
