@@ -108,26 +108,32 @@ jobs:
         tag_name: ${{ env.release }}
         files: |
           ${{ github.workspace }}/Artifacts/windows-x64-dynamic-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x64-dynamic-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-dynamic-noOpenMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-x64-dynamic-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x64-dynamic-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-dynamic-openMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-x64-static-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x64-static-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-static-noOpenMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-static-noOpenMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-x64-static-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x64-static-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-static-openMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-x64-static-openMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-noOpenMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-dynamic-openMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-arm64-static-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-arm64-static-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-static-noOpenMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-static-noOpenMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-arm64-static-openMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-noOpenMP-v.zip
           ${{ github.workspace }}/Artifacts/windows-x86-dynamic-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-dynamic-openMP-all.zip
           ${{ github.workspace }}/Artifacts/windows-x86-static-noOpenMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x86-static-noOpenMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-static-noOpenMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-static-noOpenMP-linked-runtime.zip
           ${{ github.workspace }}/Artifacts/windows-x86-static-openMP.zip
-          ${{ github.workspace }}/Artifacts/windows-x86-static-openMP-unrestricted.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-static-openMP-all.zip
+          ${{ github.workspace }}/Artifacts/windows-x86-static-openMP-linked-runtime.zip
