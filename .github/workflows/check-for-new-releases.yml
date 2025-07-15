@@ -11,6 +11,7 @@ on:
 name: Check for new releases of dependencies
 jobs:
   dependency_releases:
+    name: Check for new releases
     runs-on: windows-2022
 
     steps:
