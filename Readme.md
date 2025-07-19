@@ -19,12 +19,12 @@ ImageMagick is built with a number of third-party libraries that provide support
 To clone all the required third-party libraries for ImageMagick, run the appropriate clone script:
 
 ```cmd
-CloneDependencies.cmd
+clone-dependencies.cmd
 ```
 
 ### Run Configure.exe
 
-One of the folders is called `ImageMagick-Windows\Configure`. This folder contains various builds of the `Configure` program. Running this program will start a Wizard that allows configuration of ImageMagick and its individual components. For the dependencies not all options will be used, but it is still used to create a solution file for Visual Studio.
+Running the command `.github\build\windows\download-configure.sh` will download the `Configure` program, which is used to set up the build environment for the depndences of ImageMagick. The executable will be placed in the `Configure` folder.
 
 ### Build Dependencies
 

@@ -5,8 +5,7 @@ on:
     - main
     paths:
     - .github/workflows/release.yml
-    - .github/workflows/clone-dependencies.sh
-
+    - .github/build/windows/download-configure.sh
 
 name: Create release
 jobs:
@@ -35,13 +34,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Download configure
+      shell: cmd
+      run: |
+        .github\build\windows\download-configure.cmd
+
     - name: Clone dependencies
       shell: cmd
       run: clone-dependencies.cmd
-
-    - name: Download Configure
-      shell: cmd
-      run: download-configure.cmd
 
     - name: Run configure
       shell: cmd
@@ -73,6 +73,7 @@ jobs:
 
   release:
     name: Create release
+    if: github.event_name == 'workflow_dispatch'
     runs-on: windows-2022
     needs: build_windows
 
