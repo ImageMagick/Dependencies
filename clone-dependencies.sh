@@ -94,5 +94,19 @@ clone_optional_dependencies()
   cd ..
 }
 
+clone_linux_dependencies()
+{
+  if [ ! -d "LinuxDependencies" ]; then
+    mkdir -p "LinuxDependencies"
+  fi
+
+  cd "LinuxDependencies"
+
+  clone 'fontconfig'
+
+  cd ..
+}
+
 clone_dependencies
 clone_optional_dependencies
+clone_linux_dependencies
