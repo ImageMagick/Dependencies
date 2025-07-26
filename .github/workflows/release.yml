@@ -3,9 +3,6 @@ on:
   push:
     branches:
     - main
-    paths:
-    - .github/workflows/release.yml
-    - .github/build/windows/download-configure.sh
 
 name: Create release
 jobs:
