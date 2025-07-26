@@ -18,7 +18,7 @@ jobs:
       matrix:
         architecture: [ x64, arm64, x86 ]
         buildType: [ dynamic, static ]
-        openmp: [ openMP, noOpenMP ]
+        openmp: [ OpenMP, noOpenMP ]
         all: [ false, true ]
         linkRuntime: [ false, true ]
         exclude:
