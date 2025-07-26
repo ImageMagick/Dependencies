@@ -1,0 +1,43 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - non-windows
+
+name: Create non-windows release
+jobs:
+  build:
+    name: Build Linux ${{matrix.architecture}} static
+    container:
+      image: ubuntu:20.04
+    runs-on: ubuntu-24.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        architecture: [ x64, arm64 ]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install tools
+      run: ./.github/build/linux-${{matrix.architecture}}/install.sh
+
+    - name: Clone dependencies
+      run: ./clone-dependencies.sh
+
+    - name: Build
+      run: ./.github/build/linux-${{matrix.architecture}}/build.sh
+
+    - name: Prepare artifacts
+      run: |
+        mkdir -p /artifacts
+        cp -r /dependencies/lib /artifacts
+        cp -r /dependencies/include /artifacts
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux-${{matrix.architecture}}-static
+        path: /artifacts
