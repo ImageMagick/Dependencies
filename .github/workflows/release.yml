@@ -9,6 +9,43 @@ on:
 
 name: Create release
 jobs:
+
+  build_linux:
+    name: Build Linux ${{matrix.architecture}} static
+    container:
+      image: ubuntu:20.04
+    runs-on: ubuntu-24.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        architecture: [ x64 ]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install tools
+      run: ./.github/build/linux-${{matrix.architecture}}/install.sh
+
+    - name: Clone dependencies
+      run: ./clone-dependencies.sh
+
+    - name: Build
+      run: ./.github/build/linux-${{matrix.architecture}}/build.sh
+
+    - name: Prepare artifacts
+      run: |
+        mkdir -p /artifacts
+        cp -r /dependencies/lib /artifacts
+        cp -r /dependencies/include /artifacts
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux-${{matrix.architecture}}-static
+        path: /artifacts
+
   build_windows:
     name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
