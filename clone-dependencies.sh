@@ -17,8 +17,8 @@ clone()
     cd $folder
   else
     git clone https://github.com/ImageMagick/$repo.git $folder
-    if [ $? != 0 ]; then 
-      echo "Error during checkout"; 
+    if [ $? != 0 ]; then
+      echo "Error during checkout";
       exit;
     fi
 
@@ -94,5 +94,19 @@ clone_optional_dependencies()
   cd ..
 }
 
+clone_linux_dependencies()
+{
+  if [ ! -d "LinuxDependencies" ]; then
+    mkdir -p "LinuxDependencies"
+  fi
+
+  cd "LinuxDependencies"
+
+  clone 'fontconfig'
+
+  cd ..
+}
+
 clone_dependencies
 clone_optional_dependencies
+clone_linux_dependencies
