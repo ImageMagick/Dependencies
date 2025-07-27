@@ -10,5 +10,5 @@ rm include/fficonfig.h
 
 autoreconf -fiv
 chmod +x ./configure
-$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --disable-docs $FFI_OPTIONS --prefix=/dependencies CFLAGS="$FLAGS"
+$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --disable-docs --disable-exec-static-tramp --prefix=/dependencies CFLAGS="$FLAGS"
 $MAKE install

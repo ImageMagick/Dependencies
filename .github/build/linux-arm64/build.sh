@@ -29,7 +29,6 @@ export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
 
 # Library specific options
 export DE265_OPTIONS=""
-export FFI_OPTIONS="--disable-exec-static-tramp"
 export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS=""
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
