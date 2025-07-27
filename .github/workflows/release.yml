@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        architecture: [ x64 ]
+        architecture: [ x64, arm64 ]
 
     steps:
     - name: Checkout

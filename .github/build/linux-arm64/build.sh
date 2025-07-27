@@ -21,21 +21,25 @@ export PKG_CONFIG_PATH="/dependencies/lib/pkgconfig:/dependencies/lib/x86_64-lin
 
 # Shared options
 export CMAKE_COMMAND="cmake"
-export CMAKE_OPTIONS=""
+export CMAKE_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=$SCRIPT_PATH/cross-compilation.cmake"
 export CONFIGURE="./configure"
-export CONFIGURE_OPTIONS=""
+export CONFIGURE_OPTIONS="--host aarch64-linux-gnu"
 export MAKE="make -j$(nproc)"
-export MESON_OPTIONS=""
+export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
 
 # Library specific options
 export DE265_OPTIONS=""
-export FFI_OPTIONS=""
+export FFI_OPTIONS="--disable-exec-static-tramp"
 export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS=""
-export JPEGTURBO_OPTIONS="-DWITH_SIMD=1"
+export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
 export LCMS_OPTIONS=""
 export OPENEXR_OPTIONS=""
 export WEBP_OPTIONS="--enable-libwebpmux --enable-libwebpdemux"
+
+# Set compiler for cross-compilation
+export CC=aarch64-linux-gnu-gcc
+export CXX=aarch64-linux-gnu-g++
 
 # Build dependencies
 $SHARED_PATH/zlib.sh

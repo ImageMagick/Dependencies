@@ -20,3 +20,6 @@ ninja install
 
 chmod 755 /dependencies/bin/glib-genmarshal
 chmod 755 /dependencies/bin/glib-mkenums
+
+cp /dependencies/bin/glib-genmarshal /usr/local/bin/glib-genmarshal
+cp /dependencies/bin/glib-mkenums /usr/local/bin/glib-mkenums
