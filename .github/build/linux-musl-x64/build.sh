@@ -14,10 +14,11 @@ else
   export CMAKE_BUILD_TYPE="Release"
   export MESON_BUILD_TYPE="release"
 fi
-export CMAKE_PREFIX_PATH="/dependencies"
-export CPPFLAGS="-I/dependencies/include"
-export LDFLAGS="-L/dependencies/lib -L/dependencies/lib64"
-export PKG_CONFIG_PATH="/dependencies/lib/pkgconfig:/dependencies/lib64/pkgconfig"
+export INSTALL_PREFIX="/dependencies"
+export CMAKE_PREFIX_PATH="$INSTALL_PREFIX"
+export CPPFLAGS="-I$INSTALL_PREFIX/include"
+export LDFLAGS="-L$INSTALL_PREFIX/lib -L$INSTALL_PREFIX/lib64"
+export PKG_CONFIG_PATH="$INSTALL_PREFIX/lib/pkgconfig:$INSTALL_PREFIX/lib64/pkgconfig"
 
 # Shared options
 export CMAKE_COMMAND="cmake"

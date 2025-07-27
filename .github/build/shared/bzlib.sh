@@ -3,4 +3,4 @@ set -e
 
 cd Dependencies/bzlib
 
-$MAKE install PREFIX=/dependencies
+$MAKE install PREFIX=$INSTALL_PREFIX

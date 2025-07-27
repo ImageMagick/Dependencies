@@ -8,6 +8,6 @@ rm libtiff/tiffconf.h
 
 autoreconf -fiv
 chmod +x ./configure
-$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --prefix=/dependencies CFLAGS="$FLAGS" CXXFLAGS="$FLAGS"
+$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --prefix=$INSTALL_PREFIX CFLAGS="$FLAGS" CXXFLAGS="$FLAGS"
 echo '' > version
 $MAKE install
