@@ -119,6 +119,44 @@ jobs:
         name: macos-${{matrix.architecture}}-static
         path: macos-${{matrix.architecture}}-static.zip
 
+  build_wasm:
+    name: Build wasm ${{matrix.architecture}} static
+    container:
+      image: emscripten/emsdk:4.0.7
+    runs-on: ubuntu-24.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        architecture: [ x86 ]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install tools
+      run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
+
+    - name: Clone dependencies
+      run: ./clone-dependencies.sh
+
+    - name: Build
+      run: ./.github/build/wasm-${{matrix.architecture}}/build.sh
+
+    - name: Prepare artifacts
+      run: |
+        mkdir -p Artifacts
+        cp -r /tmp/dependencies/lib Artifacts
+        cp -r /tmp/dependencies/include Artifacts
+        cd Artifacts
+        zip -r ../wasm-${{matrix.architecture}}-static.zip .
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: wasm-${{matrix.architecture}}-static
+        path: wasm-${{matrix.architecture}}-static.zip
+
   build_windows:
     name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
@@ -186,10 +224,11 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     runs-on: windows-2022
     needs:
-      - build_windows
       - build_linux
       - build_linux_musl
       - build_macos
+      - build_wasm
+      - build_windows
 
     permissions:
       contents: write
