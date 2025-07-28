@@ -33,15 +33,16 @@ jobs:
 
     - name: Prepare artifacts
       run: |
-        mkdir -p /artifacts
-        cp -r /dependencies/lib /artifacts
-        cp -r /dependencies/include /artifacts
+        mkdir -p Artifacts
+        cp -r /dependencies/lib Artifacts
+        cp -r /dependencies/include Artifacts
+        zip -r linux-${{matrix.architecture}}-static.zip -C Artifacts .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: linux-${{matrix.architecture}}-static
-        path: /artifacts
+        path: linux-${{matrix.architecture}}-static.zip
 
   build_linux_musl:
     name: Build Linux musl ${{matrix.architecture}} static
@@ -69,15 +70,16 @@ jobs:
 
     - name: Prepare artifacts
       run: |
-        mkdir -p /artifacts
-        cp -r /dependencies/lib /artifacts
-        cp -r /dependencies/include /artifacts
+        mkdir -p Artifacts
+        cp -r /dependencies/lib Artifacts
+        cp -r /dependencies/include Artifacts
+        zip -r linux-musl-${{matrix.architecture}}-static.zip -C Artifacts .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: linux-musl-${{matrix.architecture}}-static
-        path: /artifacts
+        path: linux-musl-${{matrix.architecture}}-static.zip
 
   build_windows:
     name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
@@ -155,7 +157,7 @@ jobs:
       uses: actions/checkout@v4
 
     - uses: actions/download-artifact@v4
-      name: Download executables
+      name: Download artifacts
       with:
         path: ${{ github.workspace }}/Artifacts
         merge-multiple: true
