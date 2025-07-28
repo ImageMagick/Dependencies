@@ -37,7 +37,7 @@ jobs:
         cp -r /tmp/dependencies/lib Artifacts
         cp -r /tmp/dependencies/include Artifacts
         cd Artifacts
-        zip -r ../linux-${{matrix.architecture}}-static.zip.
+        zip -r ../linux-${{matrix.architecture}}-static.zip .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
