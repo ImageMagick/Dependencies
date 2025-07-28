@@ -83,6 +83,42 @@ jobs:
         name: linux-musl-${{matrix.architecture}}-static
         path: linux-musl-${{matrix.architecture}}-static.zip
 
+  build_macos:
+    name: Build macOS ${{matrix.architecture}} static
+    runs-on: macos-13
+
+    strategy:
+      fail-fast: false
+      matrix:
+        architecture: [ x64 ]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install tools
+      run: ./.github/build/macos-${{matrix.architecture}}/install.sh
+
+    - name: Clone dependencies
+      run: ./clone-dependencies.sh
+
+    - name: Build
+      run: ./.github/build/macos-${{matrix.architecture}}/build.sh
+
+    - name: Prepare artifacts
+      run: |
+        mkdir -p Artifacts
+        cp -r /tmp/dependencies/lib Artifacts
+        cp -r /tmp/dependencies/include Artifacts
+        cd Artifacts
+        zip -r ../macos-${{matrix.architecture}}-static.zip .
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos-${{matrix.architecture}}-static
+        path: macos-${{matrix.architecture}}-static.zip
+
   build_windows:
     name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
@@ -149,7 +185,11 @@ jobs:
     name: Create release
     if: github.event_name == 'workflow_dispatch'
     runs-on: windows-2022
-    needs: build_windows
+    needs:
+      - build_windows
+      - build_linux
+      - build_linux_musl
+      - build_macos
 
     permissions:
       contents: write
