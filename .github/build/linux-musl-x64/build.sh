@@ -14,7 +14,7 @@ else
   export CMAKE_BUILD_TYPE="Release"
   export MESON_BUILD_TYPE="release"
 fi
-export INSTALL_PREFIX="/dependencies"
+export INSTALL_PREFIX="/tmp/dependencies"
 export CMAKE_PREFIX_PATH="$INSTALL_PREFIX"
 export CPPFLAGS="-I$INSTALL_PREFIX/include"
 export LDFLAGS="-L$INSTALL_PREFIX/lib -L$INSTALL_PREFIX/lib64"

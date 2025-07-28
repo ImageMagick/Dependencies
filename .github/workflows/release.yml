@@ -34,9 +34,10 @@ jobs:
     - name: Prepare artifacts
       run: |
         mkdir -p Artifacts
-        cp -r /dependencies/lib Artifacts
-        cp -r /dependencies/include Artifacts
-        zip -r linux-${{matrix.architecture}}-static.zip -C Artifacts .
+        cp -r /tmp/dependencies/lib Artifacts
+        cp -r /tmp/dependencies/include Artifacts
+        cd Artifacts
+        zip -r ../linux-${{matrix.architecture}}-static.zip.
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
@@ -71,9 +72,10 @@ jobs:
     - name: Prepare artifacts
       run: |
         mkdir -p Artifacts
-        cp -r /dependencies/lib Artifacts
-        cp -r /dependencies/include Artifacts
-        zip -r linux-musl-${{matrix.architecture}}-static.zip -C Artifacts .
+        cp -r /tmp/dependencies/lib Artifacts
+        cp -r /tmp/dependencies/include Artifacts
+        cd Artifacts
+        zip -r ../linux-musl-${{matrix.architecture}}-static.zip .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
