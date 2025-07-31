@@ -73,6 +73,7 @@ jobs:
       run: |
         mkdir -p Artifacts
         cp -r /tmp/dependencies/lib Artifacts
+        cp -r /tmp/dependencies/lib64 Artifacts
         cp -r /tmp/dependencies/include Artifacts
         cd Artifacts
         zip -r ../linux-musl-${{matrix.architecture}}-static.zip .
