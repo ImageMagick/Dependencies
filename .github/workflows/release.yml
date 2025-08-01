@@ -8,7 +8,7 @@ name: Create release
 jobs:
 
   build_linux:
-    name: Build Linux ${{matrix.architecture}} static
+    name: Build linux ${{matrix.architecture}} static
     container:
       image: ubuntu:20.04
     runs-on: ubuntu-24.04
@@ -159,7 +159,7 @@ jobs:
         path: wasm-${{matrix.architecture}}-static.zip
 
   build_windows:
-    name: Build Windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
+    name: Build windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
 
     strategy:
