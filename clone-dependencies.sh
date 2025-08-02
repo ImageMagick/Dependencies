@@ -42,7 +42,7 @@ clone_dependencies()
   clone 'croco' '3c35df989a2011f692ee8914b6f054c9f79dc9eb'
   clone 'de265' 'c65aa04018209b75f4d86d5207f67d6396d11973'
   clone 'deflate' '318cc8e7cea3cc7bb6ee76e3da5608ce2883897a'
-  clone 'exr' '91e955a2d36cd7e6634fe410b6c45d0da8d0725c'
+  clone 'exr' '8bae717d0b284f4f086acb2c6d51a5aa73fb021d'
   clone 'ffi' '653605c8711ce113c12b3240344a6bd6d82e3a26'
   clone 'freetype' '16c2ff88b9b7dc3b7749074c514a30a2aa990dd7'
   clone 'fribidi' '3c8dc6bb1f668563601c4f470702c2caba02e5a9'
