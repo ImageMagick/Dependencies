@@ -20,8 +20,9 @@ clone()
   fi
 
   git reset --hard
+  git checkout main
   git pull origin main
-  git checkout $commit
+  git reset --hard $commit
 
   cd ..
 }
