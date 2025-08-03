@@ -9,14 +9,12 @@ export GLIB_GENMARSHAL="$INSTALL_PREFIX/bin/glib-genmarshal"
 cd gdk-pixbuf
 rm gdk-pixbuf/config.h
 
-sed -i 's|/usr/local/lib/libtiff.la|$INSTALL_PREFIX/lib/libtiff.la|' configure.ac
+mkdir __build
+cd __build
+CFLAGS=$FLAGS meson setup .. $MESON_OPTIONS --buildtype=$MESON_BUILD_TYPE --prefix=$INSTALL_PREFIX --default-library=static -Dglycin=disabled -Dandroid=disabled -Ddocumentation=false -Dintrospection=disabled -Dman=false -Drelocatable=false -Dthumbnailer=disabled -Dtests=false -Dinstalled_tests=false -Dtiff=enabled -Dpng=enabled -Dothers=enabled
+ninja install
 
-autoreconf -fiv
-chmod +x ./configure
-$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --with-included-loaders=yes --enable-modules=no --prefix=$INSTALL_PREFIX CFLAGS="$FLAGS"
-$MAKE install
-
-cd ../librsvg
+cd ../../librsvg
 
 rm config.h
 
