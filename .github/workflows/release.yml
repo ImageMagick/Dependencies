@@ -257,9 +257,7 @@ jobs:
         git push origin $release
 
     - name: Publish release
-      uses: softprops/action-gh-release@v2
-      with:
-        name: ${{ env.release }}
-        tag_name: ${{ env.release }}
-        files: |
-          ${{ github.workspace }}/Artifacts/*.zip
+      shell: cmd
+      env:
+        GH_TOKEN: ${{github.token}}
+      run: gh release create ${{env.release}} --title "Release ${{env.release}}" ${{github.workspace}}\Artifacts\*.zip
