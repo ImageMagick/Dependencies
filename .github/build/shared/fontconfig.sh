@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd LinuxDependencies/fontconfig
+cd NonWindowsDependencies/fontconfig
 
 autoreconf -fiv
 chmod +x ./configure

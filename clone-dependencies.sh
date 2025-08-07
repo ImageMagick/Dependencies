@@ -90,13 +90,13 @@ clone_optional_dependencies()
   cd ..
 }
 
-clone_linux_dependencies()
+clone_non_windows_dependencies()
 {
-  if [ ! -d "LinuxDependencies" ]; then
-    mkdir -p "LinuxDependencies"
+  if [ ! -d "NonWindowsDependencies" ]; then
+    mkdir -p "NonWindowsDependencies"
   fi
 
-  cd "LinuxDependencies"
+  cd "NonWindowsDependencies"
 
   clone 'fontconfig' '9f848be61d3dfcafcc76e083499123153c525e0b'
 
@@ -105,4 +105,4 @@ clone_linux_dependencies()
 
 clone_dependencies
 clone_optional_dependencies
-clone_linux_dependencies
+clone_non_windows_dependencies
