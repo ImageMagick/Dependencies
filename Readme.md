@@ -8,9 +8,9 @@ ImageMagick is built with a number of third-party libraries that provide support
 
 ## Requirements
 
-• Git for Windows
-• Internet connection for cloning repositories
-• Visual Studio 2017 (or newer) for building the dependencies
+- Git for Windows
+- Internet connection for cloning repositories
+- Visual Studio 2017 (or newer) for building the dependencies
 
 ## Getting Started
 
