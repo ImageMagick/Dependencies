@@ -196,7 +196,7 @@ jobs:
       shell: cmd
       working-directory: Configure
       run: |
-        Configure.Release.x64.exe /noWizard /VS2022 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime' || ''}}
+        Configure.Release.x64.exe /noWizard /VS2022 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime /includeNonWindows' || ''}}
 
     - name: Build
       shell: cmd
