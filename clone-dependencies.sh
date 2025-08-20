@@ -50,7 +50,7 @@ clone_dependencies()
   clone 'harfbuzz' '6ebe66be79875f47793d8af2e13b93c20334dc2a'
   clone 'heif' '17ff512b1b6c554ec6ec461891d23ea47c3e9e15'
   clone 'highway' '4a82c1faed7179648bc8419ffcb12b27a638c99e'
-  clone 'imath' 'cd1eae6b6f0269728fbc951fd4c659a15d231f31'
+  clone 'imath' '7df9a8daf0eed0873f97a166b59b7caf24dbd5b1'
   clone 'jpeg-turbo' '0b59952f473a826bf9373702763bc165faad6381'
   clone 'jpeg-turbo-12' '633aacbee5a4fba892d54804a16edeaa9ae68dca'
   clone 'jpeg-turbo-16' '362648691acaf65fbbe3cbcd10db30a66df223cb'
