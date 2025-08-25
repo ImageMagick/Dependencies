@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install tools
       run: ./.github/build/linux-${{matrix.architecture}}/install.sh
@@ -58,7 +58,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install tools
       run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
@@ -95,7 +95,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install tools
       run: ./.github/build/macos-${{matrix.architecture}}/install.sh
@@ -133,7 +133,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Install tools
       run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
@@ -181,7 +181,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: Download configure
       shell: cmd
@@ -236,7 +236,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - uses: actions/download-artifact@v5
       name: Download artifacts
