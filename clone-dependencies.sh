@@ -47,7 +47,7 @@ clone_dependencies()
   clone 'freetype' '16c2ff88b9b7dc3b7749074c514a30a2aa990dd7'
   clone 'fribidi' '3c8dc6bb1f668563601c4f470702c2caba02e5a9'
   clone 'glib' '7c18f9c92bd9442ce1924cedd126fe50029416a5'
-  clone 'harfbuzz' '6ebe66be79875f47793d8af2e13b93c20334dc2a'
+  clone 'harfbuzz' '3daf9f0182a643df5856d13422334b82314a1d9c'
   clone 'heif' '17ff512b1b6c554ec6ec461891d23ea47c3e9e15'
   clone 'highway' '4a82c1faed7179648bc8419ffcb12b27a638c99e'
   clone 'imath' '7df9a8daf0eed0873f97a166b59b7caf24dbd5b1'
