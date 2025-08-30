@@ -43,25 +43,50 @@ export CXX=em++
 export EM_PKG_CONFIG_PATH=$PKG_CONFIG_PATH
 
 # Build dependencies
-$SHARED_PATH/zlib.sh
-$SHARED_PATH/xml.sh
-$SHARED_PATH/png.sh
-$SHARED_PATH/freetype.sh
-$SHARED_PATH/jpeg-turbo.sh
-$SHARED_PATH/tiff.sh
-$SHARED_PATH/webp.sh
-$SHARED_PATH/openjpeg.sh
-$SHARED_PATH/lcms.sh
-$SHARED_PATH/aom.sh
-$SHARED_PATH/de265.sh
-$SHARED_PATH/heif.sh
-$SHARED_PATH/raw.sh
-$SHARED_PATH/deflate.sh
-$SHARED_PATH/imath.sh
-$SHARED_PATH/exr.sh
-$SHARED_PATH/ffi.sh
-$SHARED_PATH/glib.sh
-$SHARED_PATH/lqr.sh
-$SHARED_PATH/highway.sh
-$SHARED_PATH/brotli.sh
-$SHARED_PATH/jpeg-xl.sh
+DEPENDENCIES=(
+  "zlib"
+  "xml"
+  "png"
+  "freetype"
+  "jpeg-turbo"
+  "tiff"
+  "webp"
+  "openjpeg"
+  "lcms"
+  "aom"
+  "de265"
+  "heif"
+  "raw"
+  "deflate"
+  "imath"
+  "exr"
+  "ffi"
+  "glib"
+  "lqr"
+  "highway"
+  "brotli"
+  "jpeg-xl"
+)
+
+for dependency in "${DEPENDENCIES[@]}"; do
+  $SHARED_PATH/$dependency.sh
+done
+
+# Create license files
+license_folder="$INSTALL_PREFIX/license"
+mkdir -p "$license_folder"
+for dependency in "${DEPENDENCIES[@]}"; do
+  config_file="Dependencies/$dependency/.ImageMagick/Config.txt"
+  version_file="Dependencies/$dependency/.ImageMagick/ImageMagick.version.h"
+  if [ ! -f "$config_file" ] || [ ! -f "$version_file" ]; then
+    echo "Missing required files for $dependency (config or release info)"
+    exit 1
+  fi
+
+  license_file=$(sed -n '/^\[LICENSE\]/{n;p;}' "$config_file")
+  license_file="Dependencies/$dependency/${license_file//\\//}"
+  version=$(grep "DELEGATE_VERSION_STRING" "$version_file" | sed 's/.*"\(.*\)".*/\1/')
+
+  echo -e "[ $dependency $version ]\n" > "$license_folder/$dependency.txt"
+  cat "$license_file" >> "$license_folder/$dependency.txt"
+done

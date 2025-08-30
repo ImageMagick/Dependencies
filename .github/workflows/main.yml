@@ -149,6 +149,7 @@ jobs:
         mkdir -p Artifacts
         cp -r /tmp/dependencies/lib Artifacts
         cp -r /tmp/dependencies/include Artifacts
+        cp -r /tmp/dependencies/license Artifacts
         cd Artifacts
         zip -r ../wasm-${{matrix.architecture}}-static.zip .
 
