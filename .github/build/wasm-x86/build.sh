@@ -88,5 +88,5 @@ for dependency in "${DEPENDENCIES[@]}"; do
   version=$(grep "DELEGATE_VERSION_STRING" "$version_file" | sed 's/.*"\(.*\)".*/\1/')
 
   echo -e "[ $dependency $version ]\n" > "$license_folder/$dependency.txt"
-  cat "$license_file" >> "$license_folder/$dependency.txt"
+  sed -z '$ s/\n\+$/\n/' $license_file >> "$license_folder/$dependency.txt"
 done
