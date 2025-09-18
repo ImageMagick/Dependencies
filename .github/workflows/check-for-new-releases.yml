@@ -9,6 +9,8 @@ on:
     - .github/workflows/check-for-new-releases.yml
 
 name: Check for new releases of dependencies
+permissions:
+  contents: read
 jobs:
   dependency_releases:
     name: Check for new releases
