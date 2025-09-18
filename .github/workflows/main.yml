@@ -5,6 +5,8 @@ on:
     - main
 
 name: Create release
+permissions:
+  contents: read
 jobs:
 
   build_linux:
