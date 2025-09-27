@@ -72,6 +72,7 @@ $SHARED_PATH/fribidi.sh
 $SHARED_PATH/harfbuzz.sh
 $SHARED_PATH/pango.sh
 $SHARED_PATH/croco.sh
+$SHARED_PATH/gdk-pixbuf.sh
 $SHARED_PATH/rsvg.sh
 $SHARED_PATH/raqm.sh
 $SHARED_PATH/highway.sh
