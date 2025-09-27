@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-cd gdk-pixbuf
+cd Dependencies/gdk-pixbuf
+
 rm gdk-pixbuf/config.h
 
 mkdir __build
