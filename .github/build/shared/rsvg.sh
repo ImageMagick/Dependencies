@@ -6,8 +6,6 @@ cd Dependencies/rsvg
 export GLIB_MKENUMS="$INSTALL_PREFIX/bin/glib-mkenums"
 export GLIB_GENMARSHAL="$INSTALL_PREFIX/bin/glib-genmarshal"
 
-cd rsvg
-
 rm config.h
 
 autoreconf -fiv
