@@ -46,7 +46,7 @@ clone_dependencies()
   clone 'ffi' '105d636cc093a96b72903bf4ed63dbaced09cace'
   clone 'freetype' '16c2ff88b9b7dc3b7749074c514a30a2aa990dd7'
   clone 'fribidi' '3c8dc6bb1f668563601c4f470702c2caba02e5a9'
-  clone 'gdk-pixbuf' '7c18f9c92bd9442ce1924cedd126fe50029416a5'
+  clone 'gdk-pixbuf' '16dd179f2671d2ef880dfbe65264a2576b3af60b'
   clone 'glib' '7c18f9c92bd9442ce1924cedd126fe50029416a5'
   clone 'harfbuzz' '6ebe66be79875f47793d8af2e13b93c20334dc2a'
   clone 'heif' '17ff512b1b6c554ec6ec461891d23ea47c3e9e15'
