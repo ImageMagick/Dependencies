@@ -77,16 +77,16 @@ license_folder="$INSTALL_PREFIX/license"
 mkdir -p "$license_folder"
 for dependency in "${DEPENDENCIES[@]}"; do
   config_file="Dependencies/$dependency/.ImageMagick/Config.txt"
-  version_file="Dependencies/$dependency/.ImageMagick/ImageMagick.version.h"
   if [ ! -f "$config_file" ] || [ ! -f "$version_file" ]; then
-    echo "Missing required files for $dependency (config or release info)"
+    echo "Unable to find .ImageMagick/Config.txt for $dependency"
     exit 1
   fi
 
-  license_file=$(sed -n '/^\[LICENSE\]/{n;p;}' "$config_file")
+  version=$(sed -n '/^\[VERSION\]/{n;p;}' "$config_file")
+  release_date=$(sed -n '/^\[RELEASE_DATE\]/{n;p;}' "$config_file")
+  license_file=$(sed -n '/^\[LICENSE_FILE\]/{n;p;}' "$config_file")
   license_file="Dependencies/$dependency/${license_file//\\//}"
-  version=$(grep "DELEGATE_VERSION_STRING" "$version_file" | sed 's/.*"\(.*\)".*/\1/')
 
-  echo -e "[ $dependency $version ]\n" > "$license_folder/$dependency.txt"
+  echo -e "[ $dependency $version ($release_date) ]\n" > "$license_folder/$dependency.txt"
   sed -z '$ s/\n\+$/\n/' $license_file >> "$license_folder/$dependency.txt"
 done
