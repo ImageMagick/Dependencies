@@ -77,7 +77,7 @@ license_folder="$INSTALL_PREFIX/license"
 mkdir -p "$license_folder"
 for dependency in "${DEPENDENCIES[@]}"; do
   config_file="Dependencies/$dependency/.ImageMagick/Config.txt"
-  if [ ! -f "$config_file" ] || [ ! -f "$version_file" ]; then
+  if [ ! -f "$config_file" ]; then
     echo "Unable to find .ImageMagick/Config.txt for $dependency"
     exit 1
   fi
