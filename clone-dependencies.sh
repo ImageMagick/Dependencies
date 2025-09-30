@@ -35,43 +35,43 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' '40cbab47001229b6acf2aa6ed90975e1fe36d7cd'
-  clone 'brotli' '43c232677bd14288efb73c000634100ca02c6615'
-  clone 'bzlib' 'eb86d8f8273b733860f16b58fc5577e786dfea02'
-  clone 'cairo' '1398155a2c59bf1a7a3414087f29a4d6175e511e'
-  clone 'croco' '3c35df989a2011f692ee8914b6f054c9f79dc9eb'
-  clone 'de265' 'c65aa04018209b75f4d86d5207f67d6396d11973'
-  clone 'deflate' '318cc8e7cea3cc7bb6ee76e3da5608ce2883897a'
-  clone 'exr' 'cb29166e333c6b6b7860363263d54bf8ae9ed19d'
-  clone 'ffi' '105d636cc093a96b72903bf4ed63dbaced09cace'
-  clone 'freetype' '16c2ff88b9b7dc3b7749074c514a30a2aa990dd7'
-  clone 'fribidi' '3c8dc6bb1f668563601c4f470702c2caba02e5a9'
-  clone 'gdk-pixbuf' '16dd179f2671d2ef880dfbe65264a2576b3af60b'
-  clone 'glib' '7c18f9c92bd9442ce1924cedd126fe50029416a5'
-  clone 'harfbuzz' '6ebe66be79875f47793d8af2e13b93c20334dc2a'
-  clone 'heif' '17ff512b1b6c554ec6ec461891d23ea47c3e9e15'
-  clone 'highway' '4a82c1faed7179648bc8419ffcb12b27a638c99e'
-  clone 'imath' '7df9a8daf0eed0873f97a166b59b7caf24dbd5b1'
-  clone 'jpeg-turbo' 'd6c716ad35e2b8b3366d07a5c6a2dd746daae0af'
+  clone 'aom' 'c265586ed033f334077aa056b68edcd0174a2b21'
+  clone 'brotli' '6cd28a4611516a24ad19d5e918052d1ebe47902d'
+  clone 'bzlib' 'abffe764f875f71d051efb19d4c83139375f82d7'
+  clone 'cairo' '241f953d2571621baf5d21bca3339158a8eadd5a'
+  clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
+  clone 'de265' '581e4a1a6fd20a2e9f4d484baa16c48f3bbb529c'
+  clone 'deflate' 'fa019db28ac64f7370998ae12a32dbc1430e0da2'
+  clone 'exr' 'df9089aad1f6021cff6226e1b9120d835e15a3a6'
+  clone 'ffi' '83d3f582185ce04456e9458a1a700231b87aa254'
+  clone 'freetype' '3ffcf3840a1796c650d835e47901a33461b6f516'
+  clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
+  clone 'gdk-pixbuf' '33d446bed1e3909e1875e03ed614960f3af85028'
+  clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
+  clone 'harfbuzz' 'e67ff976b83d99b81bd565cdd9a6c865f370d26c'
+  clone 'heif' 'ba938bba4d5ed047f1a2d8518e63a3c0755e8815'
+  clone 'highway' '50c2b87026be94e83652943a07c1d02ee2e35300'
+  clone 'imath' 'd6358163268a63d525d5b5a73b250023b5036a1e'
+  clone 'jpeg-turbo' '755552649b7cb927dd3431b7d94da6d1c268c129'
   clone 'jpeg-turbo-12' '633aacbee5a4fba892d54804a16edeaa9ae68dca'
   clone 'jpeg-turbo-16' '362648691acaf65fbbe3cbcd10db30a66df223cb'
-  clone 'jpeg-xl' '0eb0e12ed9cfe95e35e88f8e144517d5f6e4e093'
-  clone 'lcms' '0a4d60e188083f207b59784397ecca88b91ed410'
-  clone 'lqr' '7d8cd9ce2109b99774b9d10d614c396a3cc2aacd'
-  clone 'lzma' 'd2d42e04f7aa9c49ba0cbaaecbe8557d20acda38'
-  clone 'openh264' 'e88db93e997c4c69f224aefc33d35c4b26578f80'
-  clone 'openjpeg' 'ae7744d2680e126abf93eaa6191996db446c04fb'
-  clone 'pango' '9b019fb87547855243b148dee4e782658f56225e'
-  clone 'pixman' '1c8b41cc9f38f5a018ada19b32da641f5782be11'
-  clone 'png' '4742e03a92b910ad869da14dd96b9c096e853326'
-  clone 'raqm' '34097e0be59f4db28bf7d57d336876fce124d0b5'
-  clone 'raw' 'a91ae551812a270b3a4331de8dc1468a3485272c'
-  clone 'rsvg' '90c26959eb99e41be7e7612c8deabb2a719483f0'
-  clone 'tiff' 'd1d17ce3f9f5ba2215edabd3d54ea0f46bb7538c'
-  clone 'webp' '444cf23c2e177105bc876611ec3d82b7d23502a0'
-  clone 'xml' '132d758d137345cbebd80417f26a216ac01ac168'
-  clone 'zip' '987138bb74e6f18b464246b1f025de82c52167f9'
-  clone 'zlib' '42998011c390732967bf56316c6dd0cb3872e589'
+  clone 'jpeg-xl' '1ac672c2c554ae11492dffab7e8b4a30569941a1'
+  clone 'lcms' '015c30082877271f155896b76f512d4d50945b28'
+  clone 'lqr' 'c4f9a027386e3e5b00fc55d5d0548341b5184990'
+  clone 'lzma' 'a0ffcd8d310534fc82ac4c690b0e47f3b9585b64'
+  clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
+  clone 'openjpeg' '24e8ce92a85662b086b8fb593cb75c22385f1147'
+  clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
+  clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
+  clone 'png' 'c4cb159c9f7a12abfb65b8bf582309e755422ceb'
+  clone 'raqm' '737616f8b39df7fe2993da67fac923d506be463f'
+  clone 'raw' '61d840a5288f12cdb54026cc77ec8e6e4954dc09'
+  clone 'rsvg' '3bae9c17d1880ff60145b6432b4a4772da8dd882'
+  clone 'tiff' '7a2fbd04879f15620586dd9cabf7dbd1e4048308'
+  clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
+  clone 'xml' 'd0b79073a947c746bdfe3ff80e0f968527a1d404'
+  clone 'zip' 'cc173a0e926871f9bb331ad1a3915d079e9ae836'
+  clone 'zlib' 'c249779e740e43684d352df7a19497bc3a95df89'
 
   cd ..
 }
@@ -84,9 +84,9 @@ clone_optional_dependencies()
 
   cd "OptionalDependencies"
 
-  clone 'fftw' '7abecb64d47dda58bd38e693dbf076990fe412c8'
-  clone 'flif' '9e2914970aa662ad18aad72c9e29860b31a2914e'
-  clone 'jbig' '7fd88607724f7c39e264bb4812ca0976a81c04e6'
+  clone 'fftw' '496292531f968365f88ac48cf6dc72153dd87695'
+  clone 'flif' '0c348a60b7ebff57aa8dfb4fc218b1cd90dd4d5a'
+  clone 'jbig' 'c431166292d1590280b30a8edefee4d36c7a6219'
 
   cd ..
 }
@@ -99,7 +99,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' '9f848be61d3dfcafcc76e083499123153c525e0b'
+  clone 'fontconfig' '52aa8b9cdc14afef519fca8aa06c7360aed8644d'
 
   cd ..
 }
