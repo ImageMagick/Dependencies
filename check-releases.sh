@@ -2,8 +2,9 @@
 
 check_release()
 {
-    current=$(grep "DELEGATE_VERSION_NUM" "$(dirname $1)/ImageMagick.version.h" | cut -d " " -f 7)
+    current=$(sed -n '/^\[VERSION\]/{n;p;}' "$(dirname $1)/Config.txt")
     current=${current//,/.}
+    current=${current%%+*}
 
     release_url=$(head -n 1 $1)
     format=$(echo $release_url | cut -d " " -f 2)
