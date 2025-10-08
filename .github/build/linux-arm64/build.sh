@@ -44,7 +44,7 @@ export CXX=aarch64-linux-gnu-g++
 # Build dependencies
 $SHARED_PATH/zlib.sh
 $SHARED_PATH/lzma.sh
-$SHARED_PATH/bzlib.sh
+$SHARED_PATH/bzip2.sh
 $SHARED_PATH/zip.sh
 $SHARED_PATH/xml.sh
 $SHARED_PATH/png.sh

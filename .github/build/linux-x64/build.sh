@@ -40,7 +40,7 @@ export WEBP_OPTIONS="--enable-libwebpmux --enable-libwebpdemux"
 # Build dependencies
 $SHARED_PATH/zlib.sh
 $SHARED_PATH/lzma.sh
-$SHARED_PATH/bzlib.sh
+$SHARED_PATH/bzip2.sh
 $SHARED_PATH/zip.sh
 $SHARED_PATH/xml.sh
 $SHARED_PATH/png.sh
