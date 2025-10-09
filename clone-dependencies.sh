@@ -44,7 +44,7 @@ clone_dependencies()
   clone 'deflate' 'fa019db28ac64f7370998ae12a32dbc1430e0da2'
   clone 'exr' 'df9089aad1f6021cff6226e1b9120d835e15a3a6'
   clone 'ffi' '5bfbcef8f3a87ae9121bba12164676384c153074'
-  clone 'freetype' '2d9a9a251c1722c6ca999f68eb03a62d743a2edf'
+  clone 'freetype' 'a589909aa4766331a06d32b846154af320ec4382'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' '52a1a0bfdda9463e5af29bcdffa670dea1e39369'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
@@ -70,7 +70,7 @@ clone_dependencies()
   clone 'tiff' '7ff6a3dcd0a6ee5817a1bfcbb6633014a0cd3e05'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '038a75246cff53d5b90ff1b32bdb3e670593091b'
-  clone 'zip' 'cc173a0e926871f9bb331ad1a3915d079e9ae836'
+  clone 'zip' '745377bdab21cf5e5fc19d0bbfcde93030d3af5e'
   clone 'zlib' 'c249779e740e43684d352df7a19497bc3a95df89'
 
   cd ..
