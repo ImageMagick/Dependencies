@@ -21,8 +21,9 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Install tools
         run: ./.github/build/linux-${{matrix.architecture}}/install.sh
@@ -59,8 +60,9 @@ jobs:
         architecture: [ x64 ]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Install tools
         run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
@@ -96,8 +98,9 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Install tools
         run: ./.github/build/macos-${{matrix.architecture}}/install.sh
@@ -134,8 +137,9 @@ jobs:
         architecture: [ x86 ]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Install tools
         run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
@@ -183,8 +187,9 @@ jobs:
       ARTIFACT_NAME: windows-${{matrix.architecture}}-${{matrix.buildType}}-${{matrix.openmp}}${{matrix.all == true && '-all' || ''}}${{matrix.linkRuntime == true && '-linked-runtime' || ''}}
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Download configure
         shell: cmd
@@ -238,8 +243,9 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - uses: actions/download-artifact@v6
         name: Download artifacts
