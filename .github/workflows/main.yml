@@ -21,31 +21,31 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Install tools
-      run: ./.github/build/linux-${{matrix.architecture}}/install.sh
+      - name: Install tools
+        run: ./.github/build/linux-${{matrix.architecture}}/install.sh
 
-    - name: Clone dependencies
-      run: ./clone-dependencies.sh
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh
 
-    - name: Build
-      run: ./.github/build/linux-${{matrix.architecture}}/build.sh
+      - name: Build
+        run: ./.github/build/linux-${{matrix.architecture}}/build.sh
 
-    - name: Prepare artifacts
-      run: |
-        mkdir -p Artifacts
-        cp -r /tmp/dependencies/lib Artifacts
-        cp -r /tmp/dependencies/include Artifacts
-        cd Artifacts
-        zip -r ../linux-${{matrix.architecture}}-static.zip .
+      - name: Prepare artifacts
+        run: |
+          mkdir -p Artifacts
+          cp -r /tmp/dependencies/lib Artifacts
+          cp -r /tmp/dependencies/include Artifacts
+          cd Artifacts
+          zip -r ../linux-${{matrix.architecture}}-static.zip .
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v5
-      with:
-        name: linux-${{matrix.architecture}}-static
-        path: linux-${{matrix.architecture}}-static.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: linux-${{matrix.architecture}}-static
+          path: linux-${{matrix.architecture}}-static.zip
 
   build_linux_musl:
     name: linux musl ${{matrix.architecture}} static
@@ -59,32 +59,32 @@ jobs:
         architecture: [ x64 ]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Install tools
-      run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
+      - name: Install tools
+        run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
 
-    - name: Clone dependencies
-      run: ./clone-dependencies.sh
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh
 
-    - name: Build
-      run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
+      - name: Build
+        run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
 
-    - name: Prepare artifacts
-      run: |
-        mkdir -p Artifacts
-        cp -r /tmp/dependencies/lib Artifacts
-        cp -r /tmp/dependencies/lib64 Artifacts
-        cp -r /tmp/dependencies/include Artifacts
-        cd Artifacts
-        zip -r ../linux-musl-${{matrix.architecture}}-static.zip .
+      - name: Prepare artifacts
+        run: |
+          mkdir -p Artifacts
+          cp -r /tmp/dependencies/lib Artifacts
+          cp -r /tmp/dependencies/lib64 Artifacts
+          cp -r /tmp/dependencies/include Artifacts
+          cd Artifacts
+          zip -r ../linux-musl-${{matrix.architecture}}-static.zip .
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v5
-      with:
-        name: linux-musl-${{matrix.architecture}}-static
-        path: linux-musl-${{matrix.architecture}}-static.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: linux-musl-${{matrix.architecture}}-static
+          path: linux-musl-${{matrix.architecture}}-static.zip
 
   build_macos:
     name: macOS ${{matrix.architecture}} static
@@ -96,31 +96,31 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Install tools
-      run: ./.github/build/macos-${{matrix.architecture}}/install.sh
+      - name: Install tools
+        run: ./.github/build/macos-${{matrix.architecture}}/install.sh
 
-    - name: Clone dependencies
-      run: ./clone-dependencies.sh
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh
 
-    - name: Build
-      run: ./.github/build/macos-${{matrix.architecture}}/build.sh
+      - name: Build
+        run: ./.github/build/macos-${{matrix.architecture}}/build.sh
 
-    - name: Prepare artifacts
-      run: |
-        mkdir -p Artifacts
-        cp -r /tmp/dependencies/lib Artifacts
-        cp -r /tmp/dependencies/include Artifacts
-        cd Artifacts
-        zip -r ../macos-${{matrix.architecture}}-static.zip .
+      - name: Prepare artifacts
+        run: |
+          mkdir -p Artifacts
+          cp -r /tmp/dependencies/lib Artifacts
+          cp -r /tmp/dependencies/include Artifacts
+          cd Artifacts
+          zip -r ../macos-${{matrix.architecture}}-static.zip .
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v5
-      with:
-        name: macos-${{matrix.architecture}}-static
-        path: macos-${{matrix.architecture}}-static.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: macos-${{matrix.architecture}}-static
+          path: macos-${{matrix.architecture}}-static.zip
 
   build_wasm:
     name: wasm ${{matrix.architecture}} static
@@ -134,32 +134,32 @@ jobs:
         architecture: [ x86 ]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Install tools
-      run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
+      - name: Install tools
+        run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
 
-    - name: Clone dependencies
-      run: ./clone-dependencies.sh
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh
 
-    - name: Build
-      run: ./.github/build/wasm-${{matrix.architecture}}/build.sh
+      - name: Build
+        run: ./.github/build/wasm-${{matrix.architecture}}/build.sh
 
-    - name: Prepare artifacts
-      run: |
-        mkdir -p Artifacts
-        cp -r /tmp/dependencies/lib Artifacts
-        cp -r /tmp/dependencies/include Artifacts
-        cp -r /tmp/dependencies/license Artifacts
-        cd Artifacts
-        zip -r ../wasm-${{matrix.architecture}}-static.zip .
+      - name: Prepare artifacts
+        run: |
+          mkdir -p Artifacts
+          cp -r /tmp/dependencies/lib Artifacts
+          cp -r /tmp/dependencies/include Artifacts
+          cp -r /tmp/dependencies/license Artifacts
+          cd Artifacts
+          zip -r ../wasm-${{matrix.architecture}}-static.zip .
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v5
-      with:
-        name: wasm-${{matrix.architecture}}-static
-        path: wasm-${{matrix.architecture}}-static.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: wasm-${{matrix.architecture}}-static
+          path: wasm-${{matrix.architecture}}-static.zip
 
   build_windows:
     name: windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
@@ -183,45 +183,45 @@ jobs:
       ARTIFACT_NAME: windows-${{matrix.architecture}}-${{matrix.buildType}}-${{matrix.openmp}}${{matrix.all == true && '-all' || ''}}${{matrix.linkRuntime == true && '-linked-runtime' || ''}}
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Download configure
-      shell: cmd
-      run: |
-        .github\build\windows\download-configure.cmd
+      - name: Download configure
+        shell: cmd
+        run: |
+          .github\build\windows\download-configure.cmd
 
-    - name: Clone dependencies
-      shell: cmd
-      run: clone-dependencies.cmd
+      - name: Clone dependencies
+        shell: cmd
+        run: clone-dependencies.cmd
 
-    - name: Run configure
-      shell: cmd
-      working-directory: Configure
-      run: |
-        Configure.Release.x64.exe /noWizard /VS2022 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime /includeNonWindows' || ''}}
+      - name: Run configure
+        shell: cmd
+        working-directory: Configure
+        run: |
+          Configure.Release.x64.exe /noWizard /VS2022 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime /includeNonWindows' || ''}}
 
-    - name: Build
-      shell: cmd
-      run: |
-        call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
-        msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
+      - name: Build
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
 
-    - name: Prepare artifacts
-      shell: cmd
-      run: |
-        del "Artifacts\bin\*.pdb" /Q 2>nul
-        del "Artifacts\lib\*.pdb" /Q 2>nul
-        for %%F in ("Artifacts\lib\*.lib") do (
-          echo %%~nxF >> "Artifacts\pre-build-libs.txt"
-        )
-        powershell -Command "Compress-Archive -Path 'Artifacts\*' -DestinationPath '${{ env.ARTIFACT_NAME }}.zip'"
+      - name: Prepare artifacts
+        shell: cmd
+        run: |
+          del "Artifacts\bin\*.pdb" /Q 2>nul
+          del "Artifacts\lib\*.pdb" /Q 2>nul
+          for %%F in ("Artifacts\lib\*.lib") do (
+            echo %%~nxF >> "Artifacts\pre-build-libs.txt"
+          )
+          powershell -Command "Compress-Archive -Path 'Artifacts\*' -DestinationPath '${{ env.ARTIFACT_NAME }}.zip'"
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v5
-      with:
-        name: ${{ env.ARTIFACT_NAME }}
-        path: ${{ env.ARTIFACT_NAME }}.zip
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.ARTIFACT_NAME }}.zip
 
   release:
     name: Create release
@@ -238,29 +238,29 @@ jobs:
       contents: write
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - uses: actions/download-artifact@v6
-      name: Download artifacts
-      with:
-        path: ${{ github.workspace }}/Artifacts
-        merge-multiple: true
+      - uses: actions/download-artifact@v6
+        name: Download artifacts
+        with:
+          path: ${{ github.workspace }}/Artifacts
+          merge-multiple: true
 
-    - name: Set release number
-      shell: bash
-      run: echo "release=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
+      - name: Set release number
+        shell: bash
+        run: echo "release=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
 
-    - name: Create and push tag
-      shell: bash
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git tag $release
-        git push origin $release
+      - name: Create and push tag
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag $release
+          git push origin $release
 
-    - name: Publish release
-      shell: cmd
-      env:
-        GH_TOKEN: ${{github.token}}
-      run: gh release create ${{env.release}} --title "Release ${{env.release}}" ${{github.workspace}}\Artifacts\*.zip
+      - name: Publish release
+        shell: cmd
+        env:
+          GH_TOKEN: ${{github.token}}
+        run: gh release create ${{env.release}} --title "Release ${{env.release}}" ${{github.workspace}}\Artifacts\*.zip
