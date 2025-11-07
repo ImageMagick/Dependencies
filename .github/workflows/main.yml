@@ -253,20 +253,20 @@ jobs:
           path: ${{ github.workspace }}/Artifacts
           merge-multiple: true
 
-      - name: Set release number
+      - name: Set version
         shell: bash
-        run: echo "release=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
+        run: echo "VERSION=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
 
       - name: Create and push tag
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag $release
-          git push origin $release
+          git tag $VERSION
+          git push origin $VERSION
 
       - name: Publish release
         shell: cmd
         env:
           GH_TOKEN: ${{github.token}}
-        run: gh release create ${{env.release}} --title "Release ${{env.release}}" ${{github.workspace}}\Artifacts\*.zip
+        run: gh release create %VERSION% --title "Release %VERSION%" ${{github.workspace}}\Artifacts\*.zip
