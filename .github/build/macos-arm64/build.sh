@@ -61,6 +61,7 @@ $SHARED_PATH/openh264.sh
 $SHARED_PATH/heif.sh
 $SHARED_PATH/raw.sh
 $SHARED_PATH/deflate.sh
+$SHARED_PATH/openjph.sh
 $SHARED_PATH/imath.sh
 $SHARED_PATH/exr.sh
 $SHARED_PATH/ffi.sh
