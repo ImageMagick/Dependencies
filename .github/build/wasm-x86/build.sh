@@ -34,7 +34,7 @@ export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS="-DENABLE_MULTITHREADING_SUPPORT=false"
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
 export LCMS_OPTIONS="--without-threads"
-export OPENEXR_OPTIONS="-DZLIB_LIBRARY=/usr/local/lib/libz.a -DZLIB_INCLUDE_DIR=/usr/local/include -DImath_DIR=/usr/local/lib/cmake/Imath"
+export OPENEXR_OPTIONS="-DImath_DIR=$INSTALL_PREFIX/lib/cmake/Imath"
 export WEBP_OPTIONS=""
 
 # Set compiler for cross-compilation
