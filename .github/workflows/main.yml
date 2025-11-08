@@ -244,8 +244,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-        with:
-          persist-credentials: false
 
       - uses: actions/download-artifact@v6
         name: Download artifacts
