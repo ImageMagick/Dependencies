@@ -122,7 +122,7 @@ jobs:
 
   build_macos:
     name: macOS arm64 static
-    runs-on: macos-13
+    runs-on: macos-14
 
     steps:
       - uses: actions/checkout@v5

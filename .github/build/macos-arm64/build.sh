@@ -6,11 +6,11 @@ SHARED_PATH="$SCRIPT_PATH/../shared"
 
 # Compiler settings
 if [[ "${DEBUG_BUILD}" ]]; then
-  export FLAGS="-g3 -O0 -fPIC -DDEBUG -arch arm64"
+  export FLAGS="-g3 -O0 -fPIC -DDEBUG"
   export CMAKE_BUILD_TYPE="Debug"
   export MESON_BUILD_TYPE="debug"
 else
-  export FLAGS="-O3 -fPIC -DNDEBUG -arch arm64"
+  export FLAGS="-O3 -fPIC -DNDEBUG"
   export CMAKE_BUILD_TYPE="Release"
   export MESON_BUILD_TYPE="release"
 fi
@@ -22,11 +22,11 @@ export PKG_CONFIG_PATH="$INSTALL_PREFIX/lib/pkgconfig"
 
 # Shared options
 export CMAKE_COMMAND="cmake"
-export CMAKE_OPTIONS="-DCMAKE_OSX_ARCHITECTURES=arm64"
+export CMAKE_OPTIONS=""
 export CONFIGURE="./configure"
-export CONFIGURE_OPTIONS="--host arm64-apple-macos13"
+export CONFIGURE_OPTIONS=""
 export MAKE="make -j$(sysctl -n hw.logicalcpu)"
-export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
+export MESON_OPTIONS=""
 export SED="gsed"
 
 # Library specific options
