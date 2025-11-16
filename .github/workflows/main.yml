@@ -88,14 +88,9 @@ jobs:
           name: linux-musl-${{matrix.architecture}}-static
           path: linux-musl-${{matrix.architecture}}-static.zip
 
-  build_macos:
-    name: macOS ${{matrix.architecture}} static
+  build_macos_x64:
+    name: macOS x64 static
     runs-on: macos-13
-
-    strategy:
-      fail-fast: false
-      matrix:
-        architecture: [ x64, arm64 ]
 
     steps:
       - uses: actions/checkout@v5
@@ -103,13 +98,13 @@ jobs:
           persist-credentials: false
 
       - name: Install tools
-        run: ./.github/build/macos-${{matrix.architecture}}/install.sh
+        run: ./.github/build/macos-x64/install.sh
 
       - name: Clone dependencies
         run: ./clone-dependencies.sh
 
       - name: Build
-        run: ./.github/build/macos-${{matrix.architecture}}/build.sh
+        run: ./.github/build/macos-x64/build.sh
 
       - name: Prepare artifacts
         run: |
@@ -117,13 +112,45 @@ jobs:
           cp -r /tmp/dependencies/lib Artifacts
           cp -r /tmp/dependencies/include Artifacts
           cd Artifacts
-          zip -r ../macos-${{matrix.architecture}}-static.zip .
+          zip -r ../macos-x64-static.zip .
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v5
         with:
-          name: macos-${{matrix.architecture}}-static
-          path: macos-${{matrix.architecture}}-static.zip
+          name: macos-x64-static
+          path: macos-x64-static.zip
+
+  build_macos:
+    name: macOS arm64 static
+    runs-on: macos-13
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Install tools
+        run: ./.github/build/macos-arm64/install.sh
+
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh
+
+      - name: Build
+        run: ./.github/build/macos-arm64/build.sh
+
+      - name: Prepare artifacts
+        run: |
+          mkdir -p Artifacts
+          cp -r /tmp/dependencies/lib Artifacts
+          cp -r /tmp/dependencies/include Artifacts
+          cd Artifacts
+          zip -r ../macos-arm64-static.zip .
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: macos-arm64-static
+          path: macos-arm64-static.zip
 
   build_wasm:
     name: wasm ${{matrix.architecture}} static
@@ -236,6 +263,7 @@ jobs:
       - build_linux
       - build_linux_musl
       - build_macos
+      - build_macos_x64
       - build_wasm
       - build_windows
 
