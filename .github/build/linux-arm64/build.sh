@@ -27,6 +27,7 @@ export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS="--host aarch64-linux-gnu"
 export MAKE="make -j$(nproc)"
 export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
+export SED="sed"
 
 # Library specific options
 export DE265_OPTIONS=""

@@ -27,6 +27,7 @@ export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS=""
 export MAKE="make -j$(nproc)"
 export MESON_OPTIONS=""
+export SED="sed"
 
 # Library specific options
 export DE265_OPTIONS=""

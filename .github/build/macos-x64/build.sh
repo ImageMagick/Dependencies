@@ -27,6 +27,7 @@ export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS=""
 export MAKE="make -j$(sysctl -n hw.logicalcpu)"
 export MESON_OPTIONS=""
+export SED="gsed"
 
 # Library specific options
 export DE265_OPTIONS=""

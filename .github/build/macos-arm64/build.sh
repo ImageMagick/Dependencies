@@ -27,6 +27,7 @@ export CONFIGURE="./configure"
 export CONFIGURE_OPTIONS="--host arm64-apple-macos13"
 export MAKE="make -j$(sysctl -n hw.logicalcpu)"
 export MESON_OPTIONS="--cross-file=$SCRIPT_PATH/cross-compilation.meson"
+export SED="gsed"
 
 # Library specific options
 export DE265_OPTIONS=""
