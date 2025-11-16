@@ -90,7 +90,7 @@ jobs:
 
   build_macos_x64:
     name: macOS x64 static
-    runs-on: macos-13
+    runs-on: macos-15-intel
 
     steps:
       - uses: actions/checkout@v5
