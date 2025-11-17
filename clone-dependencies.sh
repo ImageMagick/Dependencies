@@ -61,7 +61,7 @@ clone_dependencies()
   clone 'lzma' 'a0ffcd8d310534fc82ac4c690b0e47f3b9585b64'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'openjpeg' '5a52e8e0690da686ddb6e98310e7bb5190a9a7c5'
-  clone 'openjph' '0f62862cafbc78481f9317535961bd55377504d9'
+  clone 'openjph' '52ad28f4b08dd108b0cd62e24a8c0da5ed1952cf'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' 'c4cb159c9f7a12abfb65b8bf582309e755422ceb'
