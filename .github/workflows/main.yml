@@ -9,7 +9,7 @@ permissions:
   contents: read
 jobs:
 
-  build_linux:
+  build-linux:
     name: linux ${{matrix.architecture}} static
     container:
       image: ubuntu:20.04
@@ -48,7 +48,7 @@ jobs:
           name: linux-${{matrix.architecture}}-static
           path: linux-${{matrix.architecture}}-static.zip
 
-  build_linux_musl:
+  build-linux-musl:
     name: linux musl ${{matrix.architecture}} static
     container:
       image: alpine:3.18
@@ -88,7 +88,7 @@ jobs:
           name: linux-musl-${{matrix.architecture}}-static
           path: linux-musl-${{matrix.architecture}}-static.zip
 
-  build_macos_x64:
+  build-macos-x64:
     name: macOS x64 static
     runs-on: macos-15-intel
 
@@ -120,7 +120,7 @@ jobs:
           name: macos-x64-static
           path: macos-x64-static.zip
 
-  build_macos:
+  build-macos:
     name: macOS arm64 static
     runs-on: macos-14
 
@@ -152,7 +152,7 @@ jobs:
           name: macos-arm64-static
           path: macos-arm64-static.zip
 
-  build_wasm:
+  build-wasm:
     name: wasm ${{matrix.architecture}} static
     container:
       image: emscripten/emsdk:4.0.7
@@ -192,7 +192,7 @@ jobs:
           name: wasm-${{matrix.architecture}}-static
           path: wasm-${{matrix.architecture}}-static.zip
 
-  build_windows:
+  build-windows:
     name: windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
     runs-on: windows-2022
 
@@ -260,12 +260,12 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     runs-on: windows-2022
     needs:
-      - build_linux
-      - build_linux_musl
-      - build_macos
-      - build_macos_x64
-      - build_wasm
-      - build_windows
+      - build-linux
+      - build-linux-musl
+      - build-macos
+      - build-macos-x64
+      - build-wasm
+      - build-windows
 
     permissions:
       contents: write

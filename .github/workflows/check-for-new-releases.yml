@@ -13,7 +13,7 @@ name: Check for new releases of dependencies
 permissions:
   contents: read
 jobs:
-  dependency_releases:
+  dependency-releases:
     name: Check for new releases
     runs-on: windows-2022
 
