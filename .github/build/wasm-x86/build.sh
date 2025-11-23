@@ -58,7 +58,6 @@ DEPENDENCIES=(
   "de265"
   "heif"
   "raw"
-  "deflate"
   "openjph"
   "imath"
   "exr"
