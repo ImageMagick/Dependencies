@@ -8,10 +8,11 @@ on:
     paths:
     - .github/workflows/codeql-analysis.yml
 
-name: Codeql analysis
 permissions:
   contents: read
   security-events: write
+
+name: Codeql analysis
 jobs:
   actions:
     name: CodeQL analysis (GitHub Actions)

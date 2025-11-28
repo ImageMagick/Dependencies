@@ -4,9 +4,10 @@ on:
     branches:
     - main
 
-name: Create release
 permissions:
   contents: read
+
+name: Create release
 jobs:
 
   build-linux:
