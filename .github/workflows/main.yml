@@ -22,7 +22,7 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -61,7 +61,7 @@ jobs:
         architecture: [ x64 ]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -94,7 +94,7 @@ jobs:
     runs-on: macos-15-intel
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -126,7 +126,7 @@ jobs:
     runs-on: macos-14
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -165,7 +165,7 @@ jobs:
         architecture: [ x86 ]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -215,7 +215,7 @@ jobs:
       ARTIFACT_NAME: windows-${{matrix.architecture}}-${{matrix.buildType}}-${{matrix.openmp}}${{matrix.all == true && '-all' || ''}}${{matrix.linkRuntime == true && '-linked-runtime' || ''}}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           persist-credentials: false
 
@@ -272,7 +272,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/download-artifact@v6
         name: Download artifacts
