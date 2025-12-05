@@ -63,7 +63,7 @@ clone_dependencies()
   clone 'openjph' '52ad28f4b08dd108b0cd62e24a8c0da5ed1952cf'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
-  clone 'png' '1ab90cff861904fe85873604e12197a128809152'
+  clone 'png' 'ffced54019a7d09f99c14f6f7466e91b532f32d9'
   clone 'raqm' '737616f8b39df7fe2993da67fac923d506be463f'
   clone 'raw' '61d840a5288f12cdb54026cc77ec8e6e4954dc09'
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
