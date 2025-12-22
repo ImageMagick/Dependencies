@@ -44,7 +44,7 @@ jobs:
           zip -r ../linux-${{matrix.architecture}}-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: linux-${{matrix.architecture}}-static
           path: linux-${{matrix.architecture}}-static.zip
@@ -84,7 +84,7 @@ jobs:
           zip -r ../linux-musl-${{matrix.architecture}}-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: linux-musl-${{matrix.architecture}}-static
           path: linux-musl-${{matrix.architecture}}-static.zip
@@ -116,7 +116,7 @@ jobs:
           zip -r ../macos-x64-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: macos-x64-static
           path: macos-x64-static.zip
@@ -148,7 +148,7 @@ jobs:
           zip -r ../macos-arm64-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: macos-arm64-static
           path: macos-arm64-static.zip
@@ -188,7 +188,7 @@ jobs:
           zip -r ../wasm-${{matrix.architecture}}-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: wasm-${{matrix.architecture}}-static
           path: wasm-${{matrix.architecture}}-static.zip
@@ -251,7 +251,7 @@ jobs:
           powershell -Command "Compress-Archive -Path 'Artifacts\*' -DestinationPath '${{ env.ARTIFACT_NAME }}.zip'"
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.ARTIFACT_NAME }}.zip
