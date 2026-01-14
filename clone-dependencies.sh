@@ -55,7 +55,7 @@ clone_dependencies()
   clone 'jpeg-turbo-12' '633aacbee5a4fba892d54804a16edeaa9ae68dca'
   clone 'jpeg-turbo-16' '362648691acaf65fbbe3cbcd10db30a66df223cb'
   clone 'jpeg-xl' '1ac672c2c554ae11492dffab7e8b4a30569941a1'
-  clone 'lcms' '015c30082877271f155896b76f512d4d50945b28'
+  clone 'lcms' 'b269a998c1132449d92b4d2d05fa2515556c3087'
   clone 'lqr' 'c4f9a027386e3e5b00fc55d5d0548341b5184990'
   clone 'lzma' 'bbd50ae2ffc870f37befc0d6359d7c650ed3e140'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
