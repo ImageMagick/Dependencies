@@ -65,7 +65,7 @@ clone_dependencies()
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' 'fe8e847a414bc6d57c94e735a8a22301b20eacda'
   clone 'raqm' '737616f8b39df7fe2993da67fac923d506be463f'
-  clone 'raw' '8042123eba458db382e0bc79068a112d8b5aa73e'
+  clone 'raw' 'ad5e16cc8e672705fc3bc1769b5743930da8425b'
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
   clone 'tiff' 'baf5407d932f2bcb93309021bfaee83aafdccf72'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
