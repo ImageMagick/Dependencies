@@ -60,7 +60,7 @@ clone_dependencies()
   clone 'lzma' 'bbd50ae2ffc870f37befc0d6359d7c650ed3e140'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'openjpeg' '5a52e8e0690da686ddb6e98310e7bb5190a9a7c5'
-  clone 'openjph' '85f9a178989ed151111527ea7b85b2bedf580709'
+  clone 'openjph' '48b4d9b130fbebad4835579b28f0690f18387bab'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' '0739a9e4faa83459bd2759e34ea142d577bb922a'
@@ -71,7 +71,7 @@ clone_dependencies()
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' 'baadf4be7c6b7347060c0fc217a895e59ef4ecc0'
   clone 'zip' '745377bdab21cf5e5fc19d0bbfcde93030d3af5e'
-  clone 'zlib' 'c249779e740e43684d352df7a19497bc3a95df89'
+  clone 'zlib' '6f7c81bc0804fbe7a1282dfb0b57c930a977617e'
 
   cd ..
 }
