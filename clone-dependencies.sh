@@ -41,7 +41,7 @@ clone_dependencies()
   clone 'cairo' '241f953d2571621baf5d21bca3339158a8eadd5a'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'de265' '581e4a1a6fd20a2e9f4d484baa16c48f3bbb529c'
-  clone 'exr' '0e318df2ac926fd8714009f00706fae01d3692f2'
+  clone 'exr' '67ac180439fdabac8d26ee83e17c2a6b568f4243'
   clone 'ffi' '5bfbcef8f3a87ae9121bba12164676384c153074'
   clone 'freetype' 'a589909aa4766331a06d32b846154af320ec4382'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
@@ -60,7 +60,7 @@ clone_dependencies()
   clone 'lzma' 'bbd50ae2ffc870f37befc0d6359d7c650ed3e140'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'openjpeg' '5a52e8e0690da686ddb6e98310e7bb5190a9a7c5'
-  clone 'openjph' '48b4d9b130fbebad4835579b28f0690f18387bab'
+  clone 'openjph' '5b39ae5679fc00b209175a0274a03e77947966a2'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' '0739a9e4faa83459bd2759e34ea142d577bb922a'
@@ -71,7 +71,7 @@ clone_dependencies()
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' 'baadf4be7c6b7347060c0fc217a895e59ef4ecc0'
   clone 'zip' '745377bdab21cf5e5fc19d0bbfcde93030d3af5e'
-  clone 'zlib' '6f7c81bc0804fbe7a1282dfb0b57c930a977617e'
+  clone 'zlib' 'e42706934e4e7564d960031ae62ff29d918ee06d'
 
   cd ..
 }
