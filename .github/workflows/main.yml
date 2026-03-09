@@ -22,7 +22,7 @@ jobs:
         architecture: [ x64, arm64 ]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -44,7 +44,7 @@ jobs:
           zip -r ../linux-${{matrix.architecture}}-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
         with:
           name: linux-${{matrix.architecture}}-static
           path: linux-${{matrix.architecture}}-static.zip
@@ -61,7 +61,7 @@ jobs:
         architecture: [ x64 ]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -94,7 +94,7 @@ jobs:
     runs-on: macos-15-intel
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -116,7 +116,7 @@ jobs:
           zip -r ../macos-x64-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
         with:
           name: macos-x64-static
           path: macos-x64-static.zip
@@ -126,7 +126,7 @@ jobs:
     runs-on: macos-14
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -148,7 +148,7 @@ jobs:
           zip -r ../macos-arm64-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
         with:
           name: macos-arm64-static
           path: macos-arm64-static.zip
@@ -165,7 +165,7 @@ jobs:
         architecture: [ x86 ]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -188,7 +188,7 @@ jobs:
           zip -r ../wasm-${{matrix.architecture}}-static.zip .
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
         with:
           name: wasm-${{matrix.architecture}}-static
           path: wasm-${{matrix.architecture}}-static.zip
@@ -215,7 +215,7 @@ jobs:
       ARTIFACT_NAME: windows-${{matrix.architecture}}-${{matrix.buildType}}-${{matrix.openmp}}${{matrix.all == true && '-all' || ''}}${{matrix.linkRuntime == true && '-linked-runtime' || ''}}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
         with:
           persist-credentials: false
 
@@ -251,7 +251,7 @@ jobs:
           powershell -Command "Compress-Archive -Path 'Artifacts\*' -DestinationPath '${{ env.ARTIFACT_NAME }}.zip'"
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f #v7.0.0
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: ${{ env.ARTIFACT_NAME }}.zip
@@ -272,9 +272,9 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd #v6.0.2
 
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 #v8.0.0
         name: Download artifacts
         with:
           path: ${{ github.workspace }}/Artifacts
