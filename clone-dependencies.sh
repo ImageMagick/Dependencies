@@ -69,7 +69,7 @@ clone_dependencies()
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
   clone 'tiff' 'baf5407d932f2bcb93309021bfaee83aafdccf72'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
-  clone 'xml' '90b0834fde6fdb66bda10d9a4cfbbefb8c8c21b8'
+  clone 'xml' 'c0eaf05d50894f2fcc870ac74e3713ffd0ca36d5'
   clone 'zip' '745377bdab21cf5e5fc19d0bbfcde93030d3af5e'
   clone 'zlib' 'e42706934e4e7564d960031ae62ff29d918ee06d'
 
