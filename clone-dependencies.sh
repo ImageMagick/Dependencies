@@ -35,19 +35,19 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' 'c265586ed033f334077aa056b68edcd0174a2b21'
+  clone 'aom' 'c9b221fc6169967d5dc6b526ef0dc78510ece2a6'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'cairo' '241f953d2571621baf5d21bca3339158a8eadd5a'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
-  clone 'de265' '581e4a1a6fd20a2e9f4d484baa16c48f3bbb529c'
-  clone 'exr' '8a0b93a562ec115ff8c7e98e992abb2e4f4054c5'
+  clone 'de265' 'dbbcad42023e8f6257ea61b912241ec60cfc8b61'
+  clone 'exr' '5d10578045c189ed0654b0bb5057628232c1cdb9'
   clone 'ffi' '5bfbcef8f3a87ae9121bba12164676384c153074'
   clone 'freetype' '890b055afe0b201721026d0a62625ab3cc2b69a8'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' 'ea06957d57da54f0cb57a9080b787f466ccbc0a6'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
-  clone 'harfbuzz' '8abf2ff86fe96a0ddcfa8a06ae47267e41cdb4a6'
+  clone 'harfbuzz' 'e9d649be0a82b607ceefbc7dd33a005797e6b27d'
   clone 'heif' '6b60aba35c90df9983bf4a741083717a80428f94'
   clone 'highway' '50c2b87026be94e83652943a07c1d02ee2e35300'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
