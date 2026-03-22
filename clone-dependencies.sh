@@ -47,7 +47,7 @@ clone_dependencies()
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' 'ea06957d57da54f0cb57a9080b787f466ccbc0a6'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
-  clone 'harfbuzz' 'e9d649be0a82b607ceefbc7dd33a005797e6b27d'
+  clone 'harfbuzz' 'd09c9ef5857c5863e0ae1db78344828e72278d77'
   clone 'heif' '6b60aba35c90df9983bf4a741083717a80428f94'
   clone 'highway' '50c2b87026be94e83652943a07c1d02ee2e35300'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
