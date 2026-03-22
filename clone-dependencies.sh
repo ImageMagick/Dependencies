@@ -40,7 +40,7 @@ clone_dependencies()
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'cairo' '241f953d2571621baf5d21bca3339158a8eadd5a'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
-  clone 'de265' 'dbbcad42023e8f6257ea61b912241ec60cfc8b61'
+  clone 'de265' '581e4a1a6fd20a2e9f4d484baa16c48f3bbb529c'
   clone 'exr' '5d10578045c189ed0654b0bb5057628232c1cdb9'
   clone 'ffi' '5bfbcef8f3a87ae9121bba12164676384c153074'
   clone 'freetype' '890b055afe0b201721026d0a62625ab3cc2b69a8'
