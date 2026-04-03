@@ -280,6 +280,17 @@ jobs:
           path: ${{ github.workspace }}/Artifacts
           merge-multiple: true
 
+      - name: Generate SLSA provenance
+        id: attest
+        uses: actions/attest@59d89421af93a897026c735860bf21b6eb4f7b26 #v4.1.0
+        with:
+          subject-path: ${{github.workspace}}\Artifacts\*.zip
+
+      - name: Save provenance as multiple.intoto.jsonl
+        shell: bash
+        run: |
+          cp "${{steps.attest.outputs.bundle-path}}" "${{github.workspace}}/multiple.intoto.jsonl"
+
       - name: Set version
         shell: bash
         run: echo "VERSION=$(date +'%Y.%m.%d.%H%M')" >> $GITHUB_ENV
@@ -296,4 +307,7 @@ jobs:
         shell: cmd
         env:
           GH_TOKEN: ${{github.token}}
-        run: gh release create %VERSION% --title "Release %VERSION%" ${{github.workspace}}\Artifacts\*.zip
+        run: |
+          gh release create %VERSION% --title "Release %VERSION%" ^
+            ${{github.workspace}}\Artifacts\*.zip ^
+            ${{github.workspace}}\multiple.intoto.jsonl
