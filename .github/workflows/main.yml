@@ -52,7 +52,7 @@ jobs:
   build-linux-musl:
     name: linux musl ${{matrix.architecture}} static
     container:
-      image: alpine:3.18
+      image: alpine:3.21
     runs-on: ubuntu-24.04
 
     strategy:
