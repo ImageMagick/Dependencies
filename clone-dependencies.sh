@@ -38,7 +38,7 @@ clone_dependencies()
   clone 'aom' 'c19547ed5b56fefcded8aa8aaadbd0c05cbe686c'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
-  clone 'cairo' '241f953d2571621baf5d21bca3339158a8eadd5a'
+  clone 'cairo' '95c037dd6c455d314d12a2fad76b07b0a34c171b'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'de265' '581e4a1a6fd20a2e9f4d484baa16c48f3bbb529c'
   clone 'exr' 'cb4a243f1d1f1263c2a5e94df27ca9e12133670e'
