@@ -35,7 +35,7 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' 'c19547ed5b56fefcded8aa8aaadbd0c05cbe686c'
+  clone 'aom' 'c098f4493171dbcf26be5f8ecd805904d563eccb'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'cairo' '95c037dd6c455d314d12a2fad76b07b0a34c171b'
@@ -60,7 +60,7 @@ clone_dependencies()
   clone 'lzma' '3eb7dab2a3d6e8f5ebe5f02a657355afe2c6459d'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'openjpeg' '5a52e8e0690da686ddb6e98310e7bb5190a9a7c5'
-  clone 'openjph' 'd082953b84fe1bef86109e3ac536c341b3a3cc4d'
+  clone 'openjph' 'ae3e82c2a88bb89106e814a68d39d61fefde90e9'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' '88ee938ef91b0289339be463b29003f65d486210'
