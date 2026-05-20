@@ -195,7 +195,7 @@ jobs:
 
   build-windows:
     name: windows ${{matrix.architecture}} ${{matrix.buildType}} ${{matrix.openmp}} ${{matrix.all == true && 'all' || ''}} ${{matrix.linkRuntime == true && 'linked runtime' || ''}}
-    runs-on: windows-2022
+    runs-on: windows-2025-vs2026
 
     strategy:
       fail-fast: false
@@ -232,12 +232,12 @@ jobs:
         shell: cmd
         working-directory: Configure
         run: |
-          Configure.Release.x64.exe /noWizard /VS2022 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime /includeNonWindows' || ''}}
+          Configure.Release.x64.exe /noWizard /VS2026 /${{matrix.architecture}} /${{matrix.buildType}} /${{matrix.openmp}} ${{matrix.all == true && '/includeOptional /incompatibleLicense' || ''}} ${{matrix.linkRuntime == true && '/linkRuntime /includeNonWindows' || ''}}
 
       - name: Build
         shell: cmd
         run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          call "C:\Program Files\Microsoft Visual Studio\18\Enterprise\Common7\Tools\VsDevCmd.bat"
           msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
 
       - name: Prepare artifacts
@@ -259,7 +259,7 @@ jobs:
   release:
     name: Create release
     if: github.event_name == 'workflow_dispatch'
-    runs-on: windows-2022
+    runs-on: windows-2025-vs2026
     needs:
       - build-linux
       - build-linux-musl
