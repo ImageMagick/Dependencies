@@ -238,7 +238,7 @@ jobs:
         shell: cmd
         run: |
           call "C:\Program Files\Microsoft Visual Studio\18\Enterprise\Common7\Tools\VsDevCmd.bat"
-          msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
+          msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /verbosity:minimal /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
 
       - name: Prepare artifacts
         shell: cmd
