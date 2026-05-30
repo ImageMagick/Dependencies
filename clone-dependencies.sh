@@ -99,7 +99,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' 'd8905da160169fee0ea74a6dd5e85e3ee93d99ba'
+  clone 'fontconfig' 'af34d9f6ae9746cb926c65fdedbb1b4c8538e557'
 
   cd ..
 }
