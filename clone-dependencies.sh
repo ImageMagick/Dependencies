@@ -48,7 +48,7 @@ clone_dependencies()
   clone 'gdk-pixbuf' '18a067b92d009ae310ea6df081f7e6e5af081ab2'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
   clone 'harfbuzz' '77b339e2439cfbd2f58fa06522703a3949fe1a55'
-  clone 'heif' '3f114a04ea48fb740649ccaa3317fda9ad342c7f'
+  clone 'heif' 'fc596d6913ec921915ff3ef03cdbe0735304a825'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
   clone 'jpeg-turbo' '3f872fc3c7470a2c964e625b1d70d9bc98a03947'
