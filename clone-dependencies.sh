@@ -35,20 +35,20 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' 'c098f4493171dbcf26be5f8ecd805904d563eccb'
+  clone 'aom' 'f74a4670353c01c194379a7ef922858c530acbd2'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'cairo' '95c037dd6c455d314d12a2fad76b07b0a34c171b'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'de265' '31a9a053fca223c8136c53b3ea285048045f4514'
-  clone 'exr' 'b3e676a73f0bff1fd1f186af747210d74fb361cd'
+  clone 'exr' 'c96e4fe8fb30fb09e61072b968d0aa73c05a083f'
   clone 'ffi' '5bfbcef8f3a87ae9121bba12164676384c153074'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' '18a067b92d009ae310ea6df081f7e6e5af081ab2'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
   clone 'harfbuzz' '77b339e2439cfbd2f58fa06522703a3949fe1a55'
-  clone 'heif' '6b60aba35c90df9983bf4a741083717a80428f94'
+  clone 'heif' '3f114a04ea48fb740649ccaa3317fda9ad342c7f'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
   clone 'jpeg-turbo' '3f872fc3c7470a2c964e625b1d70d9bc98a03947'
@@ -85,7 +85,7 @@ clone_optional_dependencies()
   cd "OptionalDependencies"
 
   clone 'fftw' '6d33fb83ae4f2014834b1f506b444916e9a19ef7'
-  clone 'flif' '0c348a60b7ebff57aa8dfb4fc218b1cd90dd4d5a'
+  clone 'flif' '2f4c78d6c88025de551d461a9981be2004b36beb'
   clone 'jbig' 'c431166292d1590280b30a8edefee4d36c7a6219'
 
   cd ..
@@ -99,7 +99,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' '52aa8b9cdc14afef519fca8aa06c7360aed8644d'
+  clone 'fontconfig' 'd8905da160169fee0ea74a6dd5e85e3ee93d99ba'
 
   cd ..
 }
