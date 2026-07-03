@@ -67,5 +67,5 @@ fi
 brew install automake libtool gnu-sed nasm ossp-uuid ragel
 
 pip3 install --break-system-packages setuptools
-pip3 install --break-system-packages meson==1.5.1
-pip3 install --break-system-packages ninja==1.11.1.1
+pip3 install --break-system-packages meson==1.11.1
+pip3 install --break-system-packages ninja==1.13.0
