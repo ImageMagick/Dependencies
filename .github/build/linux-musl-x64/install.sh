@@ -6,7 +6,7 @@ apk update
 apk add autoconf automake bash file g++ gcc gettext-tiny git gperf libtool linux-headers make musl-libintl nasm pkgconf python3 py3-lxml py3-pip ragel texinfo zip
 
 pip3 install --break-system-packages --upgrade pip
-pip3 install --break-system-packages cmake==3.30.3
+pip3 install --break-system-packages cmake==4.3.4
 pip3 install --break-system-packages meson==1.11.1
 pip3 install --break-system-packages ninja==1.13.0
 
