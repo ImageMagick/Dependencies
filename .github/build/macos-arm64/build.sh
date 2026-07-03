@@ -31,7 +31,7 @@ export SED="gsed"
 
 # Library specific options
 export DE265_OPTIONS=""
-export FONTCONFIG_OPTIONS="--with-add-fonts=/System/Library/Fonts,/Library/Fonts,~/Library/Fonts"
+export FONTCONFIG_OPTIONS="-Dadditional-fonts-dirs=['/System/Library/Fonts','/Library/Fonts','~/Library/Fonts']"
 export HEIF_OPTIONS=""
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=1"
 export LCMS_OPTIONS=""
