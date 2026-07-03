@@ -5,5 +5,5 @@ cd NonWindowsDependencies/fontconfig
 
 mkdir __build
 cd __build
-CFLAGS=$FLAGS meson setup .. $MESON_OPTIONS --buildtype=$MESON_BUILD_TYPE --prefix=$INSTALL_PREFIX --default-library=static -Dnls=disabled -Dtests=disabled -Dtools=disabled $FONTCONFIG_OPTIONS
+CFLAGS=$FLAGS meson setup .. $MESON_OPTIONS --buildtype=$MESON_BUILD_TYPE --prefix=$INSTALL_PREFIX --default-library=static -Dnls=disabled -Dtests=disabled -Dtools=disabled -Ddoc=disabled -Dxml-backend=libxml2 $FONTCONFIG_OPTIONS
 ninja install
