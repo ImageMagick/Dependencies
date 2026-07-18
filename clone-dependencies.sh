@@ -42,7 +42,7 @@ clone_dependencies()
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'de265' '80e57d4a56dd9bd725e1d937be8060fbffc36ca1'
   clone 'exr' '93cdfc71e4778d1e5aeabc567dd60f9181b7029f'
-  clone 'ffi' '0c09578ec41bcddaa51318036a980cf5467a3489'
+  clone 'ffi' '6cb36a5f0bb37226679e508bc192d89a609674fa'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' '57b955e47bfa3634a310368816cb829d7812e430'
@@ -51,10 +51,10 @@ clone_dependencies()
   clone 'heif' '5def4181577ada890da9b8cb0b913f93f24c715e'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
-  clone 'jpeg-turbo' '3f872fc3c7470a2c964e625b1d70d9bc98a03947'
-  clone 'jpeg-turbo-12' '633aacbee5a4fba892d54804a16edeaa9ae68dca'
-  clone 'jpeg-turbo-16' '362648691acaf65fbbe3cbcd10db30a66df223cb'
-  clone 'jpeg-xl' 'e44084885835d64a16d0746f7d004cf30849bc0f'
+  clone 'jpeg-turbo' 'b1ff834860097a8d4c18f696da862b4fa1c7aee4'
+  clone 'jpeg-turbo-12' '9837071e8c0e5fba6daa03f31aba4416ff5eaf7c'
+  clone 'jpeg-turbo-16' 'd16d0839d655478b4d517ebe2aeabfecce8192d9'
+  clone 'jpeg-xl' '8503118ff13ab8b11680296900da3361d6703dc1'
   clone 'lcms' 'd261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8'
   clone 'lqr' 'a2e9e8b5b41bf0569f51482707a12d354a086f3a'
   clone 'lzma' '3eb7dab2a3d6e8f5ebe5f02a657355afe2c6459d'
@@ -65,7 +65,7 @@ clone_dependencies()
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' '88ee938ef91b0289339be463b29003f65d486210'
   clone 'raqm' '7f93ce05cc25aa2e9aa5baea732b0bad210bb722'
-  clone 'raw' 'e806d361d2348e2f01a66594efd396002b7c9b94'
+  clone 'raw' '9f7613ef48877180225b9377c87b0f3a65a2ca8e'
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
   clone 'tiff' 'dd724373dc07e76f0b698bb1f32639687cf130f0'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
@@ -99,7 +99,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' 'e439c5bffbe2322459e2d3e054e5475abe75fc61'
+  clone 'fontconfig' 'cb058cdc6302ecf5175078b96d7b9f0aab365ecb'
 
   cd ..
 }
