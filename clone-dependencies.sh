@@ -51,7 +51,7 @@ clone_dependencies()
   clone 'heif' '5def4181577ada890da9b8cb0b913f93f24c715e'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'
-  clone 'jpeg-turbo' '020f06d67de361ab7df4c9103749dde180808341'
+  clone 'jpeg-turbo' 'b91492930ceb23c0b5282e8b9fc21de54182d92e'
   clone 'jpeg-turbo-12' '9837071e8c0e5fba6daa03f31aba4416ff5eaf7c'
   clone 'jpeg-turbo-16' 'd16d0839d655478b4d517ebe2aeabfecce8192d9'
   clone 'jpeg-xl' '8503118ff13ab8b11680296900da3361d6703dc1'
