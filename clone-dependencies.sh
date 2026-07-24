@@ -64,7 +64,7 @@ clone_dependencies()
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'png' '88ee938ef91b0289339be463b29003f65d486210'
-  clone 'raqm' '7f93ce05cc25aa2e9aa5baea732b0bad210bb722'
+  clone 'raqm' 'a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad'
   clone 'raw' '9f7613ef48877180225b9377c87b0f3a65a2ca8e'
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
   clone 'tiff' 'dd724373dc07e76f0b698bb1f32639687cf130f0'
