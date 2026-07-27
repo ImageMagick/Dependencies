@@ -67,7 +67,7 @@ clone_dependencies()
   clone 'raqm' 'a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad'
   clone 'raw' '9f7613ef48877180225b9377c87b0f3a65a2ca8e'
   clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
-  clone 'tiff' 'dd724373dc07e76f0b698bb1f32639687cf130f0'
+  clone 'tiff' 'a00846bca0212faca9306ae7bdd1c89e3e46bf82'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '4509bf0d7b7a501b682da8635527cd77525b0ec9'
   clone 'zip' '745377bdab21cf5e5fc19d0bbfcde93030d3af5e'
