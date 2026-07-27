@@ -48,8 +48,8 @@ $SHARED_PATH/png.sh
 $SHARED_PATH/freetype.sh
 $SHARED_PATH/fontconfig.sh
 $SHARED_PATH/jpeg-turbo.sh
-$SHARED_PATH/tiff.sh
 $SHARED_PATH/webp.sh
+$SHARED_PATH/tiff.sh
 $SHARED_PATH/openjpeg.sh
 $SHARED_PATH/lcms.sh
 $SHARED_PATH/aom.sh
