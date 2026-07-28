@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 
-name: Create release
+name: Main
 jobs:
 
   build-linux:
