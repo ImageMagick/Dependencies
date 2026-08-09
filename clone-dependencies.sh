@@ -40,8 +40,8 @@ clone_dependencies()
   clone 'aom' 'f74a4670353c01c194379a7ef922858c530acbd2'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'de265' '80e57d4a56dd9bd725e1d937be8060fbffc36ca1'
-  clone 'exr' '93cdfc71e4778d1e5aeabc567dd60f9181b7029f'
-  clone 'ffi' '6cb36a5f0bb37226679e508bc192d89a609674fa'
+  clone 'exr' 'ea3c2d85f739f30bce36a1e56c4b83373bf3481f'
+  clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
   clone 'heif' '5def4181577ada890da9b8cb0b913f93f24c715e'
@@ -126,7 +126,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' 'cb058cdc6302ecf5175078b96d7b9f0aab365ecb'
+  clone 'fontconfig' '943048d94dfa3d7d4a213f36f9ef7af988397cd4'
 
   cd ..
 }
