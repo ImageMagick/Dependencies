@@ -30,7 +30,7 @@ jobs:
         run: ./.github/build/linux-${{matrix.architecture}}/install.sh
 
       - name: Clone dependencies
-        run: ./clone-dependencies.sh
+        run: ./clone-dependencies.sh linux
 
       - name: Build
         run: ./.github/build/linux-${{matrix.architecture}}/build.sh
@@ -72,7 +72,7 @@ jobs:
         run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
 
       - name: Clone dependencies
-        run: ./clone-dependencies.sh
+        run: ./clone-dependencies.sh linux-musl
 
       - name: Build
         run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
@@ -108,7 +108,7 @@ jobs:
         run: ./.github/build/macos-x64/install.sh
 
       - name: Clone dependencies
-        run: ./clone-dependencies.sh
+        run: ./clone-dependencies.sh macos
 
       - name: Build
         run: ./.github/build/macos-x64/build.sh
@@ -143,7 +143,7 @@ jobs:
         run: ./.github/build/macos-arm64/install.sh
 
       - name: Clone dependencies
-        run: ./clone-dependencies.sh
+        run: ./clone-dependencies.sh macos
 
       - name: Build
         run: ./.github/build/macos-arm64/build.sh
@@ -185,7 +185,7 @@ jobs:
         run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
 
       - name: Clone dependencies
-        run: ./clone-dependencies.sh
+        run: ./clone-dependencies.sh wasm
 
       - name: Build
         run: ./.github/build/wasm-${{matrix.architecture}}/build.sh
