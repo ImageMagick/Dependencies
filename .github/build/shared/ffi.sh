@@ -5,10 +5,11 @@ cd Dependencies/ffi
 
 $SED -i 's/AC_PREREQ(\[2.71\])//' configure.ac
 $SED -i 's/AC_CHECK_INCLUDES_DEFAULT//' configure.ac
+$SED -i '/^ACLOCAL_AMFLAGS[[:space:]]*=.*/d' Makefile.am
 rm include/ffi.h
 rm include/fficonfig.h
 
 autoreconf -fiv
 chmod +x ./configure
-$CONFIGURE $CONFIGURE_OPTIONS --disable-shared --disable-docs --disable-exec-static-tramp --prefix=$INSTALL_PREFIX CFLAGS="$FLAGS"
+$CONFIGURE $CONFIGURE_OPTIONS $FFI_OPTIONS --disable-shared --disable-docs --disable-exec-static-tramp --prefix=$INSTALL_PREFIX CFLAGS="$FLAGS"
 $MAKE install

@@ -43,7 +43,7 @@ clone_dependencies()
   clone 'exr' 'ea3c2d85f739f30bce36a1e56c4b83373bf3481f'
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
-  clone 'glib' '016373fad6b5253d531fc1bb34af23883db75056'
+  clone 'glib' 'ea0118ca0d408473d320b21262a1cdc6ce3e5f40'
   clone 'heif' '5def4181577ada890da9b8cb0b913f93f24c715e'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' 'da111679be3f9a0fb4b79d5adebfca1546873983'

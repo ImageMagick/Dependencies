@@ -168,7 +168,7 @@ jobs:
   build-wasm:
     name: wasm ${{matrix.architecture}} static
     container:
-      image: emscripten/emsdk:4.0.7
+      image: emscripten/emsdk:6.0.6
     runs-on: ubuntu-24.04
 
     strategy:

@@ -31,6 +31,7 @@ export SED="sed"
 
 # Library specific options
 export DE265_OPTIONS=""
+export FFI_OPTIONS=""
 export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS=""
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=1"

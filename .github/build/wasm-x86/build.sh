@@ -6,11 +6,11 @@ SHARED_PATH="$SCRIPT_PATH/../shared"
 
 # Compiler settings
 if [[ "${DEBUG_BUILD}" ]]; then
-  export FLAGS="-g3 -O0 -fPIC -DDEBUG"
+  export FLAGS="-g3 -O0 -fPIC -DDEBUG -m32"
   export CMAKE_BUILD_TYPE="Debug"
   export MESON_BUILD_TYPE="debug"
 else
-  export FLAGS="-O3 -fPIC -DNDEBUG"
+  export FLAGS="-O3 -fPIC -DNDEBUG -m32"
   export CMAKE_BUILD_TYPE="Release"
   export MESON_BUILD_TYPE="release"
 fi
@@ -31,6 +31,7 @@ export SED="sed"
 
 # Library specific options
 export DE265_OPTIONS="--disable-sse"
+export FFI_OPTIONS="--disable-builddir --host=wasm32-unknown-emscripten"
 export FONTCONFIG_OPTIONS=""
 export HEIF_OPTIONS="-DENABLE_MULTITHREADING_SUPPORT=false"
 export JPEGTURBO_OPTIONS="-DWITH_SIMD=0"
