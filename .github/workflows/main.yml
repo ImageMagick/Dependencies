@@ -35,6 +35,9 @@ jobs:
       - name: Build
         run: ./.github/build/linux-${{matrix.architecture}}/build.sh
 
+      - name: Generate SBOM
+        run: python3 .github/build/shared/generate-sbom.py Artifacts/sbom.json
+
       - name: Prepare artifacts
         run: |
           mkdir -p Artifacts
@@ -74,6 +77,9 @@ jobs:
       - name: Build
         run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
 
+      - name: Generate SBOM
+        run: python3 .github/build/shared/generate-sbom.py Artifacts/sbom.json
+
       - name: Prepare artifacts
         run: |
           mkdir -p Artifacts
@@ -107,6 +113,9 @@ jobs:
       - name: Build
         run: ./.github/build/macos-x64/build.sh
 
+      - name: Generate SBOM
+        run: python3 .github/build/shared/generate-sbom.py Artifacts/sbom.json
+
       - name: Prepare artifacts
         run: |
           mkdir -p Artifacts
@@ -138,6 +147,9 @@ jobs:
 
       - name: Build
         run: ./.github/build/macos-arm64/build.sh
+
+      - name: Generate SBOM
+        run: python3 .github/build/shared/generate-sbom.py Artifacts/sbom.json
 
       - name: Prepare artifacts
         run: |
@@ -177,6 +189,9 @@ jobs:
 
       - name: Build
         run: ./.github/build/wasm-${{matrix.architecture}}/build.sh
+
+      - name: Generate SBOM
+        run: python3 .github/build/shared/generate-sbom.py Artifacts/sbom.json
 
       - name: Prepare artifacts
         run: |
@@ -239,6 +254,10 @@ jobs:
         run: |
           call "C:\Program Files\Microsoft Visual Studio\18\Enterprise\Common7\Tools\VsDevCmd.bat"
           msbuild IM7.${{matrix.buildType}}.${{matrix.architecture}}.sln /verbosity:minimal /m /t:Rebuild /p:Configuration=Release,Platform=${{matrix.architecture}}
+
+      - name: Generate SBOM
+        shell: cmd
+        run: python .github\build\shared\generate-sbom.py Artifacts\sbom.json
 
       - name: Prepare artifacts
         shell: cmd
