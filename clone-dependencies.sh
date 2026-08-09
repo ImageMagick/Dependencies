@@ -29,6 +29,8 @@ clone()
 
 clone_dependencies()
 {
+  local platform=$1
+
   if [ ! -d "Dependencies" ]; then
     mkdir -p "Dependencies"
   fi
@@ -90,6 +92,8 @@ clone_dependencies()
 
 clone_optional_dependencies()
 {
+  local platform=$1
+
   case "$platform" in
     "" | windows) ;;
     *) return ;;
@@ -110,6 +114,8 @@ clone_optional_dependencies()
 
 clone_non_windows_dependencies()
 {
+  local platform=$1
+
   if [ "$platform" = "wasm" ]; then
     return
   fi
@@ -125,8 +131,6 @@ clone_non_windows_dependencies()
   cd ..
 }
 
-platform=${1:-}
-
-clone_dependencies
-clone_optional_dependencies
-clone_non_windows_dependencies
+clone_dependencies "$1"
+clone_optional_dependencies "$1"
+clone_non_windows_dependencies "$1"
