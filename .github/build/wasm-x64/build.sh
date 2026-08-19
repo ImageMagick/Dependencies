@@ -47,6 +47,7 @@ export EM_PKG_CONFIG_PATH=$PKG_CONFIG_PATH
 # Build dependencies
 DEPENDENCIES=(
   "zlib"
+  "bzip2"
   "xml"
   "png"
   "freetype"

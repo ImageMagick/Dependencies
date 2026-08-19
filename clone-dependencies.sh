@@ -39,6 +39,7 @@ clone_dependencies()
 
   clone 'aom' 'f74a4670353c01c194379a7ef922858c530acbd2'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
+  clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '80e57d4a56dd9bd725e1d937be8060fbffc36ca1'
   clone 'exr' 'ea3c2d85f739f30bce36a1e56c4b83373bf3481f'
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
@@ -65,7 +66,6 @@ clone_dependencies()
     return
   fi
 
-  clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'cairo' '95c037dd6c455d314d12a2fad76b07b0a34c171b'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
