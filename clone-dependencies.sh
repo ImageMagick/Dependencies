@@ -37,15 +37,15 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' 'f74a4670353c01c194379a7ef922858c530acbd2'
+  clone 'aom' '79de389e4abced53cb6e85b7574826dbc227cd9c'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '80e57d4a56dd9bd725e1d937be8060fbffc36ca1'
-  clone 'exr' 'ea3c2d85f739f30bce36a1e56c4b83373bf3481f'
+  clone 'exr' 'b11aebb092cd429408ed519d8d5608a9f93cace1'
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'glib' 'ea0118ca0d408473d320b21262a1cdc6ce3e5f40'
-  clone 'heif' '5def4181577ada890da9b8cb0b913f93f24c715e'
+  clone 'heif' '83b203facff83cced6776fcad00963ece4896952'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' '692409f6868d9371aae7ce17bb94f634e24fa201'
   clone 'jpeg-turbo' 'b91492930ceb23c0b5282e8b9fc21de54182d92e'
@@ -70,7 +70,7 @@ clone_dependencies()
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'fribidi' 'ef903b6f8c90cba6141afd0f28e1ca6c130317f3'
   clone 'gdk-pixbuf' '92a234886a0337480770ef93dc74ea920bf39ab3'
-  clone 'harfbuzz' 'ac25618aaecd5313fd86283b36e489ba2bf74aee'
+  clone 'harfbuzz' 'dee829272780ed0b0cedf3f1261411cef8c01509'
   clone 'lzma' '3eb7dab2a3d6e8f5ebe5f02a657355afe2c6459d'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
