@@ -3,7 +3,7 @@ set -e
 
 apk update
 
-apk add autoconf automake bash file g++ gcc gettext-tiny git gperf libtool linux-headers make musl-libintl nasm pkgconf python3 py3-lxml py3-pip ragel texinfo zip
+apk add autoconf automake bash file g++ gcc gettext-tiny git gperf help2man libtool linux-headers make musl-libintl nasm pkgconf python3 py3-lxml py3-pip ragel texinfo zip
 
 pip3 install --break-system-packages --upgrade pip
 pip3 install --break-system-packages cmake==4.3.4
