@@ -45,7 +45,7 @@ clone_dependencies()
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'glib' 'ea0118ca0d408473d320b21262a1cdc6ce3e5f40'
-  clone 'heif' '8d330c23d98f94b7aa1135503fbf5e42434523ac'
+  clone 'heif' 'b8fbb502979530d5e4baa7d24d8c353c3d13d1cd'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' '692409f6868d9371aae7ce17bb94f634e24fa201'
   clone 'jpeg-turbo' 'b91492930ceb23c0b5282e8b9fc21de54182d92e'
