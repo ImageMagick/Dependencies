@@ -64,7 +64,7 @@ if [ "$should_exit" = true ]; then
 fi
 
 # Install build tools
-brew install automake libtool gnu-sed nasm ossp-uuid ragel
+brew install automake libtool gnu-sed help2man nasm ossp-uuid ragel
 
 pip3 install --break-system-packages setuptools
 pip3 install --break-system-packages meson==1.11.1
