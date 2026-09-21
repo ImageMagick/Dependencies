@@ -66,11 +66,11 @@ clone_dependencies()
     return
   fi
 
-  clone 'cairo' '95c037dd6c455d314d12a2fad76b07b0a34c171b'
+  clone 'cairo' '4334da83d8f44abe5aab1a11956e3f8e6e58eac7'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
-  clone 'fribidi' '5826b1235edb822df35a1961eb180f30fb9134ba'
+  clone 'fribidi' 'f62e4ce7160f0c9d70a6a448c83122c920370324'
   clone 'gdk-pixbuf' '92a234886a0337480770ef93dc74ea920bf39ab3'
-  clone 'harfbuzz' 'dee829272780ed0b0cedf3f1261411cef8c01509'
+  clone 'harfbuzz' 'b1dcf2b4cc1635fc6845101c4bc800e99dd9f1c2'
   clone 'lzma' '131e9a49425f51b8dd8710c57fbaa527baed3989'
   clone 'openh264' '5ed6416df5c4eb35e275f759792c9253c5f1f5f3'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
