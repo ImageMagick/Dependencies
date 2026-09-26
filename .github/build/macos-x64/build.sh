@@ -47,6 +47,7 @@ export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH:/Library/Frameworks/Pyth
 $SHARED_PATH/zlib.sh
 $SHARED_PATH/lzma.sh
 $SHARED_PATH/bzip2.sh
+$SHARED_PATH/zstd.sh
 $SHARED_PATH/zip.sh
 $SHARED_PATH/xml.sh
 $SHARED_PATH/png.sh

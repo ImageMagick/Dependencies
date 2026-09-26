@@ -47,6 +47,7 @@ export CXX=aarch64-linux-gnu-g++
 $SHARED_PATH/zlib.sh
 $SHARED_PATH/lzma.sh
 $SHARED_PATH/bzip2.sh
+$SHARED_PATH/zstd.sh
 $SHARED_PATH/zip.sh
 $SHARED_PATH/xml.sh
 $SHARED_PATH/png.sh

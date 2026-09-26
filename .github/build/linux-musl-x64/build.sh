@@ -43,6 +43,7 @@ export WEBP_OPTIONS="--enable-libwebpmux --enable-libwebpdemux"
 $SHARED_PATH/zlib.sh
 $SHARED_PATH/lzma.sh
 $SHARED_PATH/bzip2.sh
+$SHARED_PATH/zstd.sh
 $SHARED_PATH/zip.sh
 $SHARED_PATH/xml.sh
 $SHARED_PATH/png.sh

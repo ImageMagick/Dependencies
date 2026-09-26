@@ -56,10 +56,11 @@ clone_dependencies()
   clone 'openjph' 'c1a1ffc1e3f90eb9397407f1f545a47e01390aef'
   clone 'png' '88ee938ef91b0289339be463b29003f65d486210'
   clone 'raw' '9f7613ef48877180225b9377c87b0f3a65a2ca8e'
-  clone 'tiff' 'a00846bca0212faca9306ae7bdd1c89e3e46bf82'
+  clone 'tiff' '3021cd03440ba6954f8bdf2b7ad4557a36092cd8'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '3ba73c8312b7ac88adc1a2e62df13d0827e93a0f'
   clone 'zlib' 'e42706934e4e7564d960031ae62ff29d918ee06d'
+  clone 'zstd' '4d5752ffeca8defb48ad744274f4f76b2866d71d'
 
   if [ "$platform" = "wasm" ]; then
     cd ..
