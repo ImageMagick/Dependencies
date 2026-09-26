@@ -37,17 +37,17 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' '79de389e4abced53cb6e85b7574826dbc227cd9c'
+  clone 'aom' '689067b48df9548d25e37abaa618ebd4b6015c67'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '5a0bf9f624d810de6af20e41ac3cfd92bf7de508'
-  clone 'exr' 'b11aebb092cd429408ed519d8d5608a9f93cace1'
+  clone 'exr' 'd4c1cf178fdd6466b8159bcc7d0744a49af76c0f'
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' '6cf8b1a08bdec1d41246f51bcd12e5a62c9845e2'
   clone 'glib' 'ea0118ca0d408473d320b21262a1cdc6ce3e5f40'
   clone 'heif' 'b8fbb502979530d5e4baa7d24d8c353c3d13d1cd'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
-  clone 'imath' '692409f6868d9371aae7ce17bb94f634e24fa201'
+  clone 'imath' '1ec391453dd33f3432018d3a266e3d177a705235'
   clone 'jpeg-turbo' 'b91492930ceb23c0b5282e8b9fc21de54182d92e'
   clone 'jpeg-xl' '8503118ff13ab8b11680296900da3361d6703dc1'
   clone 'lcms' 'd261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8'
