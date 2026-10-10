@@ -37,7 +37,7 @@ clone_dependencies()
 
   cd "Dependencies"
 
-  clone 'aom' '689067b48df9548d25e37abaa618ebd4b6015c67'
+  clone 'aom' '949b2083094619a8cf6491938d47e6c4804ed108'
   clone 'brotli' '6225e7a93b6bcc1f3e3b267e9523a8eaea49eb5e'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '5a0bf9f624d810de6af20e41ac3cfd92bf7de508'
