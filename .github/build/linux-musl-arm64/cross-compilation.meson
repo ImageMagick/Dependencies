@@ -1,0 +1,12 @@
+[binaries]
+c = ['clang', '--target=aarch64-alpine-linux-musl', '--sysroot=/usr/aarch64-alpine-linux-musl']
+cpp = ['clang++', '--target=aarch64-alpine-linux-musl', '--sysroot=/usr/aarch64-alpine-linux-musl']
+ar = 'aarch64-alpine-linux-musl-ar'
+strip = 'aarch64-alpine-linux-musl-strip'
+pkgconfig = 'pkg-config'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'aarch64'
+cpu = 'arm64'
+endian = 'little'
