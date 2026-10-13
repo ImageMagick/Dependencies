@@ -52,7 +52,7 @@ clone_dependencies()
   clone 'jpeg-xl' '8503118ff13ab8b11680296900da3361d6703dc1'
   clone 'lcms' 'd261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8'
   clone 'lqr' 'a2e9e8b5b41bf0569f51482707a12d354a086f3a'
-  clone 'openjpeg' '5a52e8e0690da686ddb6e98310e7bb5190a9a7c5'
+  clone 'openjpeg' '97ce1d10749b1a02d657eae491e80c572ca183b2'
   clone 'openjph' 'c1a1ffc1e3f90eb9397407f1f545a47e01390aef'
   clone 'png' '1ccb8b78643c7ad5360f00719a1e952ce0be7a53'
   clone 'raw' '9f7613ef48877180225b9377c87b0f3a65a2ca8e'
