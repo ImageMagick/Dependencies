@@ -107,7 +107,8 @@ class Updater:
         print(f"Finished updating {self.name} to {self.version}.")
 
     def _format(self, text):
-        return text.format(version=self.version, release_date=self.release_date, name=self.name)
+        return text.format(version=self.version, version_dash=self.version.replace(".", "-"),
+            release_date=self.release_date, name=self.name)
 
     def _find_release_date(self):
         """Returns the date of the GitHub release, or of the tag when there is no release.
@@ -421,6 +422,11 @@ class Updater:
             if not allow_errors:
                 raise UpdateError("cmake failed")
             print("WARNING: cmake reported errors, continuing because this is expected.")
+
+    def cmake_script(self, script, *options):
+        """Runs a CMake script using the Visual Studio 2026 Developer Command Prompt."""
+        if self._run_cmake(*options, "-P", str(script)).returncode != 0:
+            raise UpdateError(f"cmake script failed: {script}")
 
     def cmake_build(self, *targets, config="Release"):
         """Builds the specified targets in the __build folder, for example to run
