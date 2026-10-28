@@ -48,7 +48,7 @@ clone_dependencies()
   clone 'heif' '498042a72e805c50e5e84b57e15327f3cfdf6a63'
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' '1ec391453dd33f3432018d3a266e3d177a705235'
-  clone 'jpeg-turbo' '2083657bfa16a83a4ef6532702dd4cb35e73a961'
+  clone 'jpeg-turbo' 'ea2dd9d26a47da90c87a3ab57f6ac7f85977be83'
   clone 'jpeg-xl' '8503118ff13ab8b11680296900da3361d6703dc1'
   clone 'lcms' 'd261ab6fda30fd7578a2ce7ace5c0b2c7d3fc0b8'
   clone 'lqr' 'a2e9e8b5b41bf0569f51482707a12d354a086f3a'
@@ -85,8 +85,8 @@ clone_dependencies()
     *) cd ..; return ;;
   esac
 
-  clone 'jpeg-turbo-12' '9837071e8c0e5fba6daa03f31aba4416ff5eaf7c'
-  clone 'jpeg-turbo-16' 'd16d0839d655478b4d517ebe2aeabfecce8192d9'
+  clone 'jpeg-turbo-12' 'e4c325c9f2ea22198174c14cfaec6982249f819d'
+  clone 'jpeg-turbo-16' '1048733eff5403a3a3610155b457ec54a548a1af'
 
   cd ..
 }
