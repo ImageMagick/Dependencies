@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import os
+import subprocess
 import sys
 
 SECTION_FIELDS = (
@@ -14,6 +15,38 @@ SECTION_FIELDS = (
 )
 
 GROUPS = ("Dependencies", "NonWindowsDependencies")
+
+
+def read_git_value(dep_dir, *arguments):
+    result = subprocess.run(
+        ["git", *arguments],
+        cwd=dep_dir,
+        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+        text=True,
+    )
+    return result.stdout.strip() if result.returncode == 0 else ""
+
+
+def normalize_repository_url(url):
+    if url.startswith("git@github.com:"):
+        url = "https://github.com/" + url[len("git@github.com:"):]
+    elif url.startswith("ssh://git@github.com/"):
+        url = "https://github.com/" + url[len("ssh://git@github.com/"):]
+
+    scheme, separator, remainder = url.partition("://")
+    if separator:
+        authority, slash, path = remainder.partition("/")
+        if "@" in authority:
+            authority = authority.rsplit("@", 1)[1]
+        url = scheme + "://" + authority + (slash + path if slash else "")
+
+    url = url.rstrip("/")
+    if url.endswith(".git"):
+        url = url[:-4]
+
+    return url
 
 
 def read_config_lines(config_file):
@@ -50,6 +83,34 @@ def parse_config(config_file):
 
 def build_component(dep_dir, fields):
     name = fields["PRODUCT_NAME"] or os.path.basename(dep_dir.rstrip(os.sep))
+    repository_url = normalize_repository_url(read_git_value(dep_dir, "remote", "get-url", "origin"))
+    commit = read_git_value(dep_dir, "rev-parse", "HEAD")
+    external_references = [
+        {
+            "type": "website",
+            "url": fields["URL"],
+        }
+    ]
+    if repository_url:
+        external_references.append(
+            {
+                "type": "vcs",
+                "url": repository_url,
+            }
+        )
+    properties = [
+        {
+            "name": "releaseDate",
+            "value": fields["RELEASE_DATE"],
+        }
+    ]
+    if commit:
+        properties.append(
+            {
+                "name": "git.commit",
+                "value": commit,
+            }
+        )
 
     return {
         "type": "library",
@@ -65,18 +126,8 @@ def build_component(dep_dir, fields):
                 }
             }
         ],
-        "externalReferences": [
-            {
-                "type": "website",
-                "url": fields["URL"],
-            }
-        ],
-        "properties": [
-            {
-                "name": "releaseDate",
-                "value": fields["RELEASE_DATE"],
-            }
-        ],
+        "externalReferences": external_references,
+        "properties": properties,
     }
 
 
