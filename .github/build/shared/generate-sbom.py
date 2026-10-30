@@ -182,6 +182,18 @@ def main():
                 "bom-ref": "imagemagick",
                 "name": "ImageMagick",
                 "version": "[MAGICK_VERSION]",
+                "externalReferences": [
+                    {
+                        "type": "vcs",
+                        "url": "https://github.com/ImageMagick/ImageMagick",
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "git.commit",
+                        "value": "[MAGICK_COMMIT]",
+                    }
+                ],
             },
         },
         "components": components,
