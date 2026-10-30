@@ -173,7 +173,7 @@ def main():
     sbom = {
         "bomFormat": "CycloneDX",
         "specVersion": "1.5",
-        "serialNumber": "[[MAGICK_SERIAL]",
+        "serialNumber": "[MAGICK_SERIAL]",
         "version": 1,
         "metadata": {
             "timestamp": "[MAGICK_TIMESTAMP]",
