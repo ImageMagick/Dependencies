@@ -69,7 +69,7 @@ clone_dependencies()
 
   clone 'cairo' '4334da83d8f44abe5aab1a11956e3f8e6e58eac7'
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
-  clone 'fribidi' 'f62e4ce7160f0c9d70a6a448c83122c920370324'
+  clone 'fribidi' '8f7c6660d5576dded3672b232ec558cecd48464b'
   clone 'gdk-pixbuf' '92a234886a0337480770ef93dc74ea920bf39ab3'
   clone 'harfbuzz' 'c77409b255cbce3e39210681dfad9ba93eadbcbe'
   clone 'lzma' '131e9a49425f51b8dd8710c57fbaa527baed3989'
