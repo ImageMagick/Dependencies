@@ -1,0 +1,31 @@
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+name: Publish release
+jobs:
+  publish:
+    name: Publish release
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Create GitHub app token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 #v3.3.0
+        id: app-token
+        with:
+          client-id: ${{vars.APP_CLIENT_ID}}
+          private-key: ${{secrets.APP_PRIVATE_KEY}}
+          permission-contents: write
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 #v7.0.1
+        with:
+          token: ${{steps.app-token.outputs.token}}
+
+      - name: Create and push tag
+        run: |
+          version=$(date +'%Y.%m.%d.%H%M')
+          echo "Releasing version: $version"
+          git tag "$version"
+          git push origin "refs/tags/$version"
