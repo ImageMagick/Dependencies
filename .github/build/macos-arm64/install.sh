@@ -5,6 +5,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 brew list --formula
 
+# Install build tools
+brew install automake libtool gnu-sed help2man nasm ossp-uuid ragel
+
 # Uninstall already installed development libraries
 
 brew uninstall ant
@@ -60,9 +63,6 @@ done
 if [ "$should_exit" = true ]; then
     exit 1
 fi
-
-# Install build tools
-brew install automake libtool gnu-sed help2man nasm ossp-uuid ragel
 
 pip3 install --break-system-packages setuptools
 pip3 install --break-system-packages meson==1.11.1
