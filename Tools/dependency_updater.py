@@ -108,6 +108,7 @@ class Updater:
 
     def _format(self, text):
         return text.format(version=self.version, version_dash=self.version.replace(".", "-"),
+            version_short=re.sub(r"^(\d+\.\d+)\.0$", r"\1", self.version),
             release_date=self.release_date, name=self.name)
 
     def _find_release_date(self):
