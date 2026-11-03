@@ -41,7 +41,7 @@ clone_dependencies()
   clone 'brotli' '62877063ab55b3494bdee9d1239156754aed6413'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '5a0bf9f624d810de6af20e41ac3cfd92bf7de508'
-  clone 'exr' '38c84b18ac5a573e74d2be086b2cb6bbb5b8ce6c'
+  clone 'exr' '6455d7391169487718865eb3e74b4fd09cede96d'
   clone 'ffi' '91982d4ac97b179dd1fb878caef2ed2847bc38b6'
   clone 'freetype' 'c872866d7b45c6926d82a636c3f9055472e6c334'
   clone 'glib' 'ea0118ca0d408473d320b21262a1cdc6ce3e5f40'
