@@ -59,7 +59,7 @@ clone_dependencies()
   clone 'tiff' '3021cd03440ba6954f8bdf2b7ad4557a36092cd8'
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '3ba73c8312b7ac88adc1a2e62df13d0827e93a0f'
-  clone 'zlib' 'e42706934e4e7564d960031ae62ff29d918ee06d'
+  clone 'zlib' '7ac4b95dcd62251e3a7d9e5e7118e54bb8e77677'
   clone 'zstd' '4d5752ffeca8defb48ad744274f4f76b2866d71d'
 
   if [ "$platform" = "wasm" ]; then
@@ -71,7 +71,7 @@ clone_dependencies()
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'fribidi' 'a51f6765d9bfafab1f7bd3f5f507ccf1eac6be6b'
   clone 'gdk-pixbuf' '92a234886a0337480770ef93dc74ea920bf39ab3'
-  clone 'harfbuzz' 'c77409b255cbce3e39210681dfad9ba93eadbcbe'
+  clone 'harfbuzz' '338e792f58c4256e3db49fffdcfe29c30e824e1f'
   clone 'lzma' '131e9a49425f51b8dd8710c57fbaa527baed3989'
   clone 'openh264' '8f7d29ca929a6b66682c0a5889a62a68c0cfa486'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
