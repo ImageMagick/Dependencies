@@ -5,6 +5,9 @@ A dependency specific script (Dependencies/<name>/.ImageMagick/update.py)
 creates an Updater and passes it a list of Step objects. Each step performs
 some work and can ask the user to create a commit before continuing.
 
+URLs use the version as entered. Config.txt, commit messages and status text
+use a three-part version when the input contains only major.minor.
+
 Only the Python standard library is used.
 """
 import datetime
@@ -62,13 +65,17 @@ class Updater:
         self.root_dir = Path(__file__).resolve().parent.parent
         self.build_dir = self.dependency_dir / BUILD_FOLDER
         self.version = None
+        self.source_version = None
         self.release_date = None
 
     # ------------------------------------------------------------------ run
 
     def run(self, steps):
         try:
-            self.version = _read_input("Version: ", _is_version)
+            self.source_version = _read_input("Version: ", _is_version)
+            self.version = self.source_version
+            if len(self.version.split(".")) == 2:
+                self.version += ".0"
             default_date = self._find_release_date()
             if default_date:
                 self.release_date = _read_input(f"Release date (YYYY-MM-DD) [{default_date}]: ",
@@ -106,9 +113,9 @@ class Updater:
         print()
         print(f"Finished updating {self.name} to {self.version}.")
 
-    def _format(self, text):
-        return text.format(version=self.version, version_dash=self.version.replace(".", "-"),
-            version_short=re.sub(r"^(\d+\.\d+)\.0$", r"\1", self.version),
+    def _format(self, text, version=None):
+        version = version or self.version
+        return text.format(version=version, version_dash=version.replace(".", "-"),
             release_date=self.release_date, name=self.name)
 
     def _find_release_date(self):
@@ -117,13 +124,13 @@ class Updater:
         if not self.url:
             return None
         gitiles = re.match(r"(https://[^/]+\.googlesource\.com/.+?)/\+archive/(.+?)\.tar\.gz$",
-            self._format(self.url))
+            self._format(self.url, self.source_version))
         if gitiles:
             return self._find_git_tag_date(gitiles.group(1), gitiles.group(2))
         match = re.match(
             r"https://github\.com/([^/]+)/([^/]+)/(?:archive/refs/tags/(.+?)\.(?:tar\.gz|tar\.xz|zip)"
             r"|releases/download/([^/]+)/)",
-            self._format(self.url))
+            self._format(self.url, self.source_version))
         if not match:
             return None
         repo = f"{match.group(1)}/{match.group(2)}"
@@ -252,7 +259,7 @@ class Updater:
     # --------------------------------------------------------------- source
 
     def download(self, url):
-        url = self._format(url)
+        url = self._format(url, self.source_version)
         file_name = url.rstrip("/").split("/")[-1]
         target = Path(tempfile.gettempdir()) / f"{self.name}-{file_name}"
         print(f"Downloading {url}")
