@@ -49,7 +49,7 @@ clone_dependencies()
   clone 'highway' 'e1a586af5be6358bb983ff608f9678a622209ca3'
   clone 'imath' '1ec391453dd33f3432018d3a266e3d177a705235'
   clone 'jpeg-turbo' '9d19b46aaa956004d6792d8a4780b47199befd88'
-  clone 'jpeg-xl' '5fbd8129ead7c686420e99464cc5a4fbf6305d7e'
+  clone 'jpeg-xl' 'd00b49945f904423b987220b2b2db3f9bb5af825'
   clone 'lcms' 'bd5d9d288646a9c8ba2d9fba965bb53f331b67bf'
   clone 'lqr' 'a2e9e8b5b41bf0569f51482707a12d354a086f3a'
   clone 'openjpeg' '97ce1d10749b1a02d657eae491e80c572ca183b2'
