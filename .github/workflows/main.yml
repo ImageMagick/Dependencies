@@ -28,11 +28,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install tools
-        run: ./.github/build/linux-${{matrix.architecture}}/install.sh
-
       - name: Clone dependencies
         run: ./clone-dependencies.sh linux
+
+      - name: Install tools
+        run: ./.github/build/linux-${{matrix.architecture}}/install.sh
 
       - name: Build
         run: ./.github/build/linux-${{matrix.architecture}}/build.sh
@@ -69,11 +69,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install tools
-        run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
-
       - name: Clone dependencies
         run: ./clone-dependencies.sh linux-musl
+
+      - name: Install tools
+        run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
 
       - name: Build
         run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
@@ -103,11 +103,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install tools
-        run: ./.github/build/macos-arm64/install.sh
-
       - name: Clone dependencies
         run: ./clone-dependencies.sh macos
+
+      - name: Install tools
+        run: ./.github/build/macos-arm64/install.sh
 
       - name: Build
         run: ./.github/build/macos-arm64/build.sh
@@ -144,11 +144,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install tools
-        run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
-
       - name: Clone dependencies
         run: ./clone-dependencies.sh wasm
+
+      - name: Install tools
+        run: ./.github/build/wasm-${{matrix.architecture}}/install.sh
 
       - name: Build
         run: ./.github/build/wasm-${{matrix.architecture}}/build.sh

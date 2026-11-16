@@ -60,7 +60,7 @@ clone_dependencies()
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '3ba73c8312b7ac88adc1a2e62df13d0827e93a0f'
   clone 'zlib' '7ac4b95dcd62251e3a7d9e5e7118e54bb8e77677'
-  clone 'zstd' '4d5752ffeca8defb48ad744274f4f76b2866d71d'
+  clone 'zstd' '66a2b4f50b0d5b32a3b9be7e790a5f61606a8ce5'
 
   if [ "$platform" = "wasm" ]; then
     cd ..
