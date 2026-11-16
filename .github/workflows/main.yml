@@ -28,11 +28,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Clone dependencies
-        run: ./clone-dependencies.sh linux
-
       - name: Install tools
         run: ./.github/build/linux-${{matrix.architecture}}/install.sh
+
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh linux
 
       - name: Build
         run: ./.github/build/linux-${{matrix.architecture}}/build.sh
@@ -69,11 +69,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Clone dependencies
-        run: ./clone-dependencies.sh linux-musl
-
       - name: Install tools
         run: ./.github/build/linux-musl-${{matrix.architecture}}/install.sh
+
+      - name: Clone dependencies
+        run: ./clone-dependencies.sh linux-musl
 
       - name: Build
         run: ./.github/build/linux-musl-${{matrix.architecture}}/build.sh
