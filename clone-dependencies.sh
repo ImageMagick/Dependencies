@@ -71,7 +71,7 @@ clone_dependencies()
   clone 'croco' '178785cdc6faecad555a4e6fe4fda2b625046e8e'
   clone 'fribidi' 'a51f6765d9bfafab1f7bd3f5f507ccf1eac6be6b'
   clone 'gdk-pixbuf' '92a234886a0337480770ef93dc74ea920bf39ab3'
-  clone 'harfbuzz' '338e792f58c4256e3db49fffdcfe29c30e824e1f'
+  clone 'harfbuzz' '874b386c7cfc47c4e47c05ce284f462214b0c20a'
   clone 'lzma' '131e9a49425f51b8dd8710c57fbaa527baed3989'
   clone 'openh264' '8f7d29ca929a6b66682c0a5889a62a68c0cfa486'
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
@@ -127,7 +127,7 @@ clone_non_windows_dependencies()
 
   cd "NonWindowsDependencies"
 
-  clone 'fontconfig' '943048d94dfa3d7d4a213f36f9ef7af988397cd4'
+  clone 'fontconfig' '3625ade71143eab617de9fb595ab5c8452684cc1'
 
   cd ..
 }
