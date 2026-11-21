@@ -120,9 +120,15 @@ class Updater:
 
     def _find_release_date(self):
         """Returns the date of the GitHub release, or of the tag when there is no release.
-        For googlesource.com (gitiles) urls the date of the tag is used."""
+        For GitLab urls and googlesource.com (gitiles) urls the date of the tag is used."""
         if not self.url:
             return None
+        gitlab = re.match(
+            r"https://([^/]+)/([^/]+)/([^/]+)/-/archive/(.+?)/[^/]+\.(?:tar\.gz|tar\.bz2|tar\.xz|zip)$",
+            self._format(self.url, self.source_version))
+        if gitlab:
+            return self._find_gitlab_tag_date(gitlab.group(1), gitlab.group(2),
+                gitlab.group(3), gitlab.group(4))
         gitiles = re.match(r"(https://[^/]+\.googlesource\.com/.+?)/\+archive/(.+?)\.tar\.gz$",
             self._format(self.url, self.source_version))
         if gitiles:
@@ -171,6 +177,25 @@ class Updater:
             except UpdateError as e:
                 print(f"Unable to find the release date: {e}")
                 return None
+
+    def _find_gitlab_tag_date(self, host, namespace, project, tag):
+        print(f"Looking up the release date of {host}/{namespace}/{project} {tag}")
+        project_id = urllib.parse.quote(f"{namespace}/{project}", safe="")
+        tag_id = urllib.parse.quote(tag, safe="")
+        try:
+            request = urllib.request.Request(
+                f"https://{host}/api/v4/projects/{project_id}/repository/tags/{tag_id}",
+                headers={"Accept": "application/json"})
+            with urllib.request.urlopen(request, timeout=30) as response:
+                result = json.loads(response.read().decode("utf-8"))
+            commit = result["commit"]
+            date = commit.get("committed_date") or commit.get("created_at")
+            if date:
+                return date[:10]
+            return None
+        except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError) as e:
+            print(f"Unable to find the release date: {e}")
+            return None
 
     # ------------------------------------------------------------------ git
 
