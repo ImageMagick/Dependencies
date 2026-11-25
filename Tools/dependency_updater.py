@@ -96,9 +96,11 @@ class Updater:
                 self.apply_checkout_line_endings()
 
                 if step.commit_message:
+                    repo = step.commit_repo or self.dependency_dir
+                    self.add_new_files(repo, step.commit_paths)
                     self.request_commit(
                         self._format(step.commit_message),
-                        step.commit_repo or self.dependency_dir,
+                        repo,
                         step.commit_paths,
                         step.wait)
         except UpdateError as e:
@@ -250,6 +252,23 @@ class Updater:
         for path in paths:
             print(f"Adding {path} to git (ignored by .gitignore)")
         self.git("add", "--force", "--", *paths)
+
+    def add_new_files(self, repo, paths=None):
+        """Stages untracked, non-ignored files within the commit paths."""
+        try:
+            result = subprocess.run(
+                ["git", "ls-files", "--others", "--exclude-standard", "-z", "--",
+                 *(paths or ["."])],
+                cwd=repo, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            if result.stdout:
+                subprocess.run(
+                    ["git", "--literal-pathspecs", "add", "--pathspec-from-file=-",
+                     "--pathspec-file-nul"],
+                    cwd=repo, input=result.stdout, stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE, check=True)
+                print("Added new files to git")
+        except subprocess.CalledProcessError as e:
+            raise UpdateError(f"unable to add new files to git: {os.fsdecode(e.stderr).strip()}")
 
     def _status(self, repo, paths=None):
         return self.git("status", "--porcelain", "--", *(paths or ["."]), cwd=repo)
