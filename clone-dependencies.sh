@@ -41,7 +41,7 @@ clone_dependencies()
   clone 'brotli' '62877063ab55b3494bdee9d1239156754aed6413'
   clone 'bzip2' 'abffe764f875f71d051efb19d4c83139375f82d7'
   clone 'de265' '5a0bf9f624d810de6af20e41ac3cfd92bf7de508'
-  clone 'exr' '08b91283fdc428e51f211c4f14d11daceacfac8a'
+  clone 'exr' '867a34b478227ff8d52aed47ee7dce933eb265d8'
   clone 'ffi' '87567b988d0da8b48bf6b0547698e04650639263'
   clone 'freetype' 'c872866d7b45c6926d82a636c3f9055472e6c334'
   clone 'glib' 'a6e49289595163c1fad25af24f58e0fd6a05cc2c'
@@ -60,7 +60,7 @@ clone_dependencies()
   clone 'webp' 'b981ef267195cb12f2cb97e4dd23e12a1323a4ce'
   clone 'xml' '3ba73c8312b7ac88adc1a2e62df13d0827e93a0f'
   clone 'zlib' '7ac4b95dcd62251e3a7d9e5e7118e54bb8e77677'
-  clone 'zstd' '66a2b4f50b0d5b32a3b9be7e790a5f61606a8ce5'
+  clone 'zstd' '294aecc30cb5e97efd5736adc77d13927c7ef67e'
 
   if [ "$platform" = "wasm" ]; then
     cd ..
@@ -77,7 +77,7 @@ clone_dependencies()
   clone 'pango' '0b1e4536e0005f3c36b523c17ea12322490efd45'
   clone 'pixman' 'f7b55a8d3c39380724da9fbdef72ad70be800efc'
   clone 'raqm' 'a699b8b7838acb4ac8d5891f42ecf3d84a00a9ad'
-  clone 'rsvg' '7415a6765db7554ba6f0f1b3dcb0877f36ff581b'
+  clone 'rsvg' '227ecf724e7b972efab84cf654aae23c981bc548'
   clone 'zip' '4fb2753af4c718080b62fbadda0e99fd9178ab6a'
 
   case "$platform" in
